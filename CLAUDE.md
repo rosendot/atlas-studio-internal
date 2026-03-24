@@ -6,7 +6,7 @@ Personal knowledge base, reusable toolkit, and internal kit browser for building
 
 ```
 wp-agency-vault/
-├── app/                     # Next.js kit browser UI (TypeScript + Tailwind)
+├── dashboard/               # Next.js kit browser UI (TypeScript + Tailwind)
 │   ├── app/
 │   │   ├── components/      # KitBrowser, KitDetail
 │   │   ├── page.tsx         # Reads kit.json files from ../kits/
@@ -28,7 +28,7 @@ wp-agency-vault/
 
 ## Kit Browser UI
 
-Run with `cd app && npm run dev` → http://localhost:3000
+Run with `cd dashboard && npm run dev` → http://localhost:3000
 
 The UI reads `kit.json` from each kit folder at build time. It displays kits as filterable cards with category sidebar, search, code viewer with file tabs, and editable variable inputs.
 
