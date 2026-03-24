@@ -1,0 +1,49 @@
+{
+  "name": "Infinite Carousel",
+  "slug": "infinite-carousel",
+  "description": "Infinite-loop carousel with arrow navigation, dot indicators, and touch swipe support.",
+  "category": "interactive",
+  "tags": ["carousel", "slider", "gallery", "swipe"],
+  "files": {
+    "js": ["carousel.js"],
+    "css": ["carousel.css"]
+  },
+  "variables": {
+    "slidesPerView": {
+      "label": "Slides per view (desktop)",
+      "type": "number",
+      "default": 4
+    },
+    "transitionSpeed": {
+      "label": "Transition speed",
+      "type": "string",
+      "default": "0.5s"
+    },
+    "dotColorActive": {
+      "label": "Active dot color",
+      "type": "color",
+      "default": "#b42318"
+    },
+    "arrowBg": {
+      "label": "Arrow background",
+      "type": "color",
+      "default": "#ffffff"
+    },
+    "arrowHoverBg": {
+      "label": "Arrow hover background",
+      "type": "color",
+      "default": "#1a1a1a"
+    }
+  },
+  "variants": {
+    "default": {
+      "label": "Standard (4 per view)",
+      "class": "carousel"
+    },
+    "gallery": {
+      "label": "Gallery (3 per view)",
+      "class": "carousel carousel--gallery"
+    }
+  },
+  "dependencies": []
+}

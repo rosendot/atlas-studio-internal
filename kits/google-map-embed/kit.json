@@ -1,0 +1,45 @@
+{
+  "name": "Google Map Embed",
+  "slug": "google-map-embed",
+  "description": "Responsive Google Maps iframe embed with contact info grid layout.",
+  "category": "section",
+  "tags": ["map", "google", "location", "contact", "visit"],
+  "files": {
+    "css": ["map.css"],
+    "php": ["map.php"]
+  },
+  "variables": {
+    "embedUrl": {
+      "label": "Google Maps embed URL",
+      "type": "string",
+      "default": ""
+    },
+    "mapMinHeight": {
+      "label": "Map minimum height",
+      "type": "string",
+      "default": "350px"
+    },
+    "address": {
+      "label": "Street address",
+      "type": "string",
+      "default": "123 Main Street\nCity, ST 00000"
+    },
+    "phone": {
+      "label": "Phone number",
+      "type": "string",
+      "default": "(000) 000-0000"
+    },
+    "email": {
+      "label": "Email address",
+      "type": "string",
+      "default": "hello@example.com"
+    },
+    "hours": {
+      "label": "Business hours",
+      "type": "string",
+      "default": "Mon-Fri: 11am-10pm\nSat-Sun: 10am-11pm"
+    }
+  },
+  "variants": {},
+  "dependencies": []
+}

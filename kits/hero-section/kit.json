@@ -1,0 +1,35 @@
+{
+  "name": "Hero Section",
+  "slug": "hero-section",
+  "description": "Full-width hero with dark overlay, centered text, and CTA buttons.",
+  "category": "section",
+  "tags": ["hero", "banner", "landing", "cta", "overlay"],
+  "files": {
+    "css": ["hero.css"],
+    "php": ["hero.php"]
+  },
+  "variables": {
+    "minHeight": {
+      "label": "Minimum height",
+      "type": "string",
+      "default": "90vh"
+    },
+    "overlayColor": {
+      "label": "Overlay color",
+      "type": "color",
+      "default": "rgba(26, 18, 8, 0.6)"
+    },
+    "fallbackBg": {
+      "label": "Fallback background (no image)",
+      "type": "color",
+      "default": "#1a1208"
+    },
+    "maxWidth": {
+      "label": "Content max width",
+      "type": "string",
+      "default": "750px"
+    }
+  },
+  "variants": {},
+  "dependencies": []
+}
