@@ -1,0 +1,226 @@
+"use client";
+
+import { useState } from "react";
+import type { KitData } from "../page";
+
+const LANG_COLORS: Record<string, string> = {
+  js: "text-yellow-400 border-yellow-400/30",
+  css: "text-blue-400 border-blue-400/30",
+  php: "text-purple-400 border-purple-400/30",
+};
+
+export default function KitDetail({
+  kit,
+  onBack,
+}: {
+  kit: KitData;
+  onBack: () => void;
+}) {
+  const allFiles = Object.entries(kit.files).flatMap(([lang, files]) =>
+    files.map((f) => ({ name: f, lang }))
+  );
+  const [activeFile, setActiveFile] = useState(allFiles[0]?.name || "");
+  const [variables, setVariables] = useState<Record<string, string | number>>(
+    Object.fromEntries(
+      Object.entries(kit.variables).map(([key, v]) => [key, v.default])
+    )
+  );
+
+  return (
+    <div className="min-h-[calc(100vh-57px)]">
+      {/* Top bar */}
+      <div className="border-b border-[var(--card-border)] px-6 py-3 flex items-center gap-4">
+        <button
+          onClick={onBack}
+          className="text-sm text-[var(--muted)] hover:text-[var(--foreground)] transition-colors flex items-center gap-1.5"
+        >
+          <span>←</span> Back to kits
+        </button>
+        <span className="text-[var(--card-border)]">|</span>
+        <h2 className="font-semibold">{kit.name}</h2>
+        <span className="text-xs text-[var(--muted)] bg-[var(--card-bg)] px-2 py-0.5 rounded">
+          {kit.category}
+        </span>
+      </div>
+
+      <div className="flex">
+        {/* Left: Code viewer */}
+        <div className="flex-1 border-r border-[var(--card-border)]">
+          {/* File tabs */}
+          <div className="flex border-b border-[var(--card-border)] px-4">
+            {allFiles.map(({ name, lang }) => (
+              <button
+                key={name}
+                onClick={() => setActiveFile(name)}
+                className={`px-4 py-2.5 text-sm font-mono transition-colors border-b-2 ${
+                  activeFile === name
+                    ? `${LANG_COLORS[lang] || "text-[var(--foreground)]"} border-current`
+                    : "text-[var(--muted)] border-transparent hover:text-[var(--foreground)]"
+                }`}
+              >
+                {name}
+              </button>
+            ))}
+          </div>
+
+          {/* Code block */}
+          <div className="p-4 overflow-auto max-h-[calc(100vh-180px)]">
+            <pre className="text-sm font-mono leading-relaxed">
+              <code className="text-[var(--foreground)]">
+                {kit.fileContents[activeFile] || "// No content available"}
+              </code>
+            </pre>
+          </div>
+        </div>
+
+        {/* Right: Kit info & variables */}
+        <div className="w-80 p-5 overflow-auto max-h-[calc(100vh-180px)]">
+          {/* Description */}
+          <div className="mb-6">
+            <h3 className="text-xs uppercase tracking-wider text-[var(--muted)] mb-2">
+              Description
+            </h3>
+            <p className="text-sm text-[var(--foreground)] leading-relaxed">
+              {kit.description}
+            </p>
+          </div>
+
+          {/* Tags */}
+          <div className="mb-6">
+            <h3 className="text-xs uppercase tracking-wider text-[var(--muted)] mb-2">
+              Tags
+            </h3>
+            <div className="flex flex-wrap gap-1.5">
+              {kit.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-xs text-[var(--gold)] bg-[var(--gold)]/10 px-2 py-0.5 rounded-full"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Variants */}
+          {Object.keys(kit.variants).length > 0 && (
+            <div className="mb-6">
+              <h3 className="text-xs uppercase tracking-wider text-[var(--muted)] mb-2">
+                Variants
+              </h3>
+              <div className="flex flex-col gap-1.5">
+                {Object.entries(kit.variants).map(([key, variant]) => (
+                  <div
+                    key={key}
+                    className="text-sm bg-[var(--card-bg)] border border-[var(--card-border)] px-3 py-2 rounded-lg"
+                  >
+                    <span className="text-[var(--foreground)]">
+                      {variant.label}
+                    </span>
+                    <span className="text-[var(--muted)] text-xs ml-2 font-mono">
+                      .{variant.class}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Variables */}
+          {Object.keys(kit.variables).length > 0 && (
+            <div className="mb-6">
+              <h3 className="text-xs uppercase tracking-wider text-[var(--muted)] mb-3">
+                Customizable Variables
+              </h3>
+              <div className="flex flex-col gap-3">
+                {Object.entries(kit.variables).map(([key, variable]) => (
+                  <div key={key}>
+                    <label className="text-xs text-[var(--muted)] block mb-1">
+                      {variable.label}
+                    </label>
+                    {variable.type === "color" ? (
+                      <div className="flex items-center gap-2">
+                        <input
+                          type="color"
+                          value={
+                            typeof variables[key] === "string" &&
+                            variables[key].toString().startsWith("#")
+                              ? (variables[key] as string)
+                              : "#b42318"
+                          }
+                          onChange={(e) =>
+                            setVariables({ ...variables, [key]: e.target.value })
+                          }
+                          className="w-8 h-8 rounded border border-[var(--card-border)] cursor-pointer bg-transparent"
+                        />
+                        <input
+                          type="text"
+                          value={variables[key]}
+                          onChange={(e) =>
+                            setVariables({ ...variables, [key]: e.target.value })
+                          }
+                          className="flex-1 bg-[var(--card-bg)] border border-[var(--card-border)] rounded px-2 py-1.5 text-xs font-mono text-[var(--foreground)] focus:outline-none focus:border-[var(--accent)]"
+                        />
+                      </div>
+                    ) : variable.type === "number" ? (
+                      <input
+                        type="number"
+                        value={variables[key]}
+                        onChange={(e) =>
+                          setVariables({
+                            ...variables,
+                            [key]: Number(e.target.value),
+                          })
+                        }
+                        className="w-full bg-[var(--card-bg)] border border-[var(--card-border)] rounded px-2 py-1.5 text-xs font-mono text-[var(--foreground)] focus:outline-none focus:border-[var(--accent)]"
+                      />
+                    ) : (
+                      <input
+                        type="text"
+                        value={variables[key]}
+                        onChange={(e) =>
+                          setVariables({ ...variables, [key]: e.target.value })
+                        }
+                        className="w-full bg-[var(--card-bg)] border border-[var(--card-border)] rounded px-2 py-1.5 text-xs font-mono text-[var(--foreground)] focus:outline-none focus:border-[var(--accent)]"
+                      />
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Dependencies */}
+          {kit.dependencies.length > 0 && (
+            <div className="mb-6">
+              <h3 className="text-xs uppercase tracking-wider text-[var(--muted)] mb-2">
+                Dependencies
+              </h3>
+              <div className="flex flex-wrap gap-1.5">
+                {kit.dependencies.map((dep) => (
+                  <span
+                    key={dep}
+                    className="text-xs text-[var(--accent)] bg-[var(--accent)]/10 px-2 py-0.5 rounded-full"
+                  >
+                    {dep}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {kit.dependencies.length === 0 && (
+            <div className="mb-6">
+              <h3 className="text-xs uppercase tracking-wider text-[var(--muted)] mb-2">
+                Dependencies
+              </h3>
+              <p className="text-xs text-[var(--muted)]">
+                None — standalone kit
+              </p>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
