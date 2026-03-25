@@ -1,0 +1,18 @@
+{
+  "name": "Smash Balloon All Access",
+  "slug": "smash-balloon",
+  "composer": null,
+  "tier": "premium",
+  "license": "agency",
+  "cost": "$299/yr first year, $598/yr renewal",
+  "covers": "unlimited sites",
+  "cost_per_site": "negligible",
+  "category": "social",
+  "buy_when": "later",
+  "install_on": ["every-site"],
+  "description": "Displays Instagram, Facebook, TikTok feeds + Google/Yelp/Facebook/Trustpilot/TripAdvisor reviews on client websites via Reviews Feed Pro. Auto-updates.",
+  "tags": ["social-media", "instagram", "facebook", "tiktok", "feeds", "reviews", "google-reviews", "yelp"],
+  "replaces": ["google-reviews-widget"],
+  "requires": [],
+  "config_notes": "Includes Reviews Feed Pro — no separate Google Reviews plugin needed. One license covers all social platforms + reviews across every client site."
+}

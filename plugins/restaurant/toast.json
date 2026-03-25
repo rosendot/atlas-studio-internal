@@ -1,0 +1,24 @@
+{
+  "name": "Toast Integration (Custom)",
+  "slug": "toast-integration",
+  "composer": null,
+  "tier": "custom",
+  "license": "custom-built",
+  "cost": "$0 (your code)",
+  "covers": "unlimited",
+  "cost_per_site": "$0",
+  "category": "pos",
+  "buy_when": "later",
+  "install_on": ["restaurant"],
+  "description": "Custom integration for Toast POS clients. No official WooCommerce plugin exists. Website serves as branding/SEO/marketing layer with links to Toast's ordering page. Menu display via Toast API if partner-approved.",
+  "tags": ["toast", "pos", "restaurant", "ordering", "marketing"],
+  "replaces": [],
+  "requires": [],
+  "condition": "Only for clients using Toast POS. API is partner-gated — requires Toast integration partner approval for deeper access.",
+  "integration_approach": {
+    "basic": "WordPress site handles branding, menu display, gallery, reviews, SEO. 'Order Now' button links to client's order.toasttab.com page.",
+    "advanced": "If partner API access granted, pull menu data from Toast menu API for styled display on WordPress. Ordering still redirects to Toast.",
+    "build_time": "~10-15 hours first build, reuse template after"
+  },
+  "config_notes": "Most limited POS integration. Toast controls ordering UX. Your value is the branding, SEO, and marketing website — most Toast restaurants have terrible websites."
+}

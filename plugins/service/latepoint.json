@@ -1,0 +1,20 @@
+{
+  "name": "LatePoint Agency",
+  "slug": "latepoint",
+  "composer": null,
+  "tier": "premium",
+  "license": "agency",
+  "cost": "$299/yr (promo first year), $499/yr renewal",
+  "cost_lifetime": "$599 one-time",
+  "covers": "100 sites",
+  "cost_per_site": "~$3-5/yr",
+  "category": "appointments",
+  "buy_when": "later",
+  "install_on": ["service"],
+  "description": "Appointment booking system: staff management, service categories, Google Calendar sync, automated email/SMS reminders, payment collection.",
+  "tags": ["appointments", "booking", "salon", "service", "calendar", "scheduling"],
+  "replaces": [],
+  "requires": [],
+  "condition": "Only needed if client is NOT using Square Appointments. If they are, embed the Square booking widget instead.",
+  "config_notes": "Lifetime license ($599) worth considering to avoid renewals. Configure staff, services, and time slots per business."
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Fluent Forms Pro",
+  "slug": "fluent-forms",
+  "composer": null,
+  "tier": "premium",
+  "license": "agency",
+  "cost": "$199/yr",
+  "covers": "unlimited sites",
+  "cost_per_site": "negligible",
+  "category": "forms",
+  "install_on": ["every-site"],
+  "description": "Contact forms, inquiry forms, quote requests, appointment requests, feedback forms. Conditional logic, multi-step, file uploads, payment integration.",
+  "tags": ["forms", "contact", "payment", "multi-step", "conditional-logic"],
+  "replaces": ["contact-form-7", "wpforms", "gravity-forms"],
+  "requires": [],
+  "config_notes": "Integrates with Square/Stripe/PayPal for payment fields. Use conditional logic for catering/event inquiry forms."
+}

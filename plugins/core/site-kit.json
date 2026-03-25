@@ -1,0 +1,17 @@
+{
+  "name": "Site Kit by Google",
+  "slug": "google-site-kit",
+  "composer": "wpackagist-plugin/google-site-kit",
+  "tier": "free",
+  "license": "free",
+  "cost": "$0",
+  "covers": "unlimited",
+  "cost_per_site": "$0",
+  "category": "analytics",
+  "install_on": ["every-site"],
+  "description": "Google's official plugin. Connects GA4, Search Console, and PageSpeed Insights into wp-admin dashboard.",
+  "tags": ["analytics", "google", "ga4", "search-console", "pagespeed"],
+  "replaces": [],
+  "requires": [],
+  "config_notes": "Connect with client's Google account. For deeper analytics, give clients direct GA4 dashboard access."
+}

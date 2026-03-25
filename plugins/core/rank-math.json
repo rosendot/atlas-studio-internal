@@ -1,0 +1,17 @@
+{
+  "name": "Rank Math Business",
+  "slug": "rank-math",
+  "composer": "wpackagist-plugin/seo-by-rank-math",
+  "tier": "premium",
+  "license": "agency",
+  "cost": "$252/yr",
+  "covers": "100 sites",
+  "cost_per_site": "$2.52/yr",
+  "category": "seo",
+  "install_on": ["every-site"],
+  "description": "Advanced schema markup, XML sitemaps, Search Console integration, local SEO, rank tracking, 404 monitor, redirects, white-label reports.",
+  "tags": ["seo", "schema", "sitemap", "local-seo", "rank-tracking", "redirects"],
+  "replaces": ["yoast-seo", "all-in-one-seo"],
+  "requires": [],
+  "config_notes": "Activate and run the setup wizard. Set business type per site. Enable LocalBusiness schema for all client sites."
+}

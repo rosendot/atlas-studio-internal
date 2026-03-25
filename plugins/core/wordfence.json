@@ -1,0 +1,19 @@
+{
+  "name": "Wordfence Premium",
+  "slug": "wordfence",
+  "composer": "wpackagist-plugin/wordfence",
+  "tier": "premium",
+  "license": "per-site",
+  "cost": "$149/yr per site",
+  "cost_volume": "~$112/site at 15+ volume",
+  "covers": "1 site",
+  "cost_per_site": "$149/yr",
+  "category": "security",
+  "buy_when": "day-1",
+  "install_on": ["every-site"],
+  "description": "WordPress application-level security: real-time firewall rules, malware scanning, login protection, brute-force blocking. Cloudways covers server security; this covers the WordPress layer.",
+  "tags": ["security", "firewall", "malware", "2fa", "brute-force"],
+  "replaces": [],
+  "requires": [],
+  "config_notes": "Use Wordfence Central (free) to monitor all client sites from one dashboard."
+}

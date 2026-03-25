@@ -1,0 +1,19 @@
+{
+  "name": "Zaytech Smart Online Order",
+  "slug": "zaytech-smart-online-order",
+  "composer": "wpackagist-plugin/flavor",
+  "tier": "freemium",
+  "license": "per-site",
+  "cost": "Free core, $20-50/mo pro (client pays)",
+  "covers": "1 site",
+  "cost_per_site": "Client pays directly",
+  "category": "pos",
+  "buy_when": "later",
+  "install_on": ["restaurant"],
+  "description": "Clover POS integration — imports Clover menu to WordPress, enables inline ordering via shortcode, orders print directly to Clover POS device.",
+  "tags": ["clover", "pos", "ordering", "restaurant", "menu-sync"],
+  "replaces": [],
+  "requires": ["woocommerce"],
+  "condition": "Only for clients using Clover POS. For Square clients, use custom Square ordering UI instead.",
+  "config_notes": "Free core handles basic ordering. Pro tiers ($20-50/mo) add features like tipping, delivery zones, and scheduling. Client pays Zaytech directly."
+}

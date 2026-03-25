@@ -1,0 +1,18 @@
+{
+  "name": "UpdraftPlus Enterprise",
+  "slug": "updraftplus",
+  "composer": "wpackagist-plugin/updraftplus",
+  "tier": "premium",
+  "license": "agency",
+  "cost": "$195/yr",
+  "covers": "unlimited sites",
+  "cost_per_site": "negligible",
+  "category": "backup",
+  "buy_when": "day-1",
+  "install_on": ["every-site"],
+  "description": "Scheduled off-site backups to your own cloud storage (Google Drive, Dropbox, S3). One-click restore, site migration/cloning. Never rely solely on host backups.",
+  "tags": ["backup", "migration", "restore", "cloud-storage", "cloning"],
+  "replaces": [],
+  "requires": [],
+  "config_notes": "Set up automated schedule (daily DB, weekly files). Send to a cloud provider separate from hosting."
+}

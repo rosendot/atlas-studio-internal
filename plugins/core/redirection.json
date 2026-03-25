@@ -1,0 +1,17 @@
+{
+  "name": "Redirection",
+  "slug": "redirection",
+  "composer": "wpackagist-plugin/redirection",
+  "tier": "free",
+  "license": "free",
+  "cost": "$0",
+  "covers": "unlimited",
+  "cost_per_site": "$0",
+  "category": "seo",
+  "install_on": ["every-site"],
+  "description": "301 redirect manager and 404 error tracking. Essential during site migrations from old sites to new WordPress builds.",
+  "tags": ["redirects", "404", "migration", "seo"],
+  "replaces": [],
+  "requires": [],
+  "config_notes": "Set up before launching a migrated site. Import old URL list and map to new paths."
+}

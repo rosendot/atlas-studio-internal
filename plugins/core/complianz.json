@@ -1,0 +1,19 @@
+{
+  "name": "Complianz Agency",
+  "slug": "complianz",
+  "composer": "wpackagist-plugin/complianz-gdpr",
+  "tier": "premium",
+  "license": "agency",
+  "cost": "$399/yr",
+  "covers": "25 sites",
+  "cost_per_site": "$15.96/yr",
+  "scale_note": "100 sites = $799/yr if you pass 25 clients",
+  "category": "privacy",
+  "buy_when": "later",
+  "install_on": ["every-site"],
+  "description": "Cookie consent banners, GDPR/CCPA compliance, auto-generated privacy policies, Google Consent Mode v2 integration.",
+  "tags": ["privacy", "gdpr", "ccpa", "cookies", "consent", "compliance"],
+  "replaces": [],
+  "requires": [],
+  "config_notes": "Required for any site running analytics, forms, or e-commerce. Run the cookie scan after all plugins are installed."
+}
