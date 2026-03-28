@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import type { ThemeData } from "../page";
 
 const LANG_COLORS: Record<string, string> = {
@@ -30,6 +30,21 @@ export default function ThemeDetail({
       Object.entries(theme.variables).map(([key, v]) => [key, v.default])
     )
   );
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+
+  useEffect(() => {
+    const iframe = iframeRef.current;
+    if (iframe?.contentWindow) {
+      iframe.contentWindow.postMessage(
+        { type: "update-variables", variables },
+        "*"
+      );
+    }
+  }, [variables]);
+
+  const handleVariableChange = (key: string, value: string | number) => {
+    setVariables((prev) => ({ ...prev, [key]: value }));
+  };
 
   return (
     <div className="min-h-[calc(100vh-57px)]">
@@ -74,9 +89,16 @@ export default function ThemeDetail({
       {activeView === "preview" && (
         <div className="h-[calc(100vh-114px)]">
           <iframe
+            ref={iframeRef}
             src={`/api/theme-preview/${theme.slug}`}
             className="w-full h-full border-0"
             title={`${theme.name} full preview`}
+            onLoad={() => {
+              iframeRef.current?.contentWindow?.postMessage(
+                { type: "update-variables", variables },
+                "*"
+              );
+            }}
           />
         </div>
       )}
@@ -193,7 +215,7 @@ export default function ThemeDetail({
                           : "#b42318"
                       }
                       onChange={(e) =>
-                        setVariables({ ...variables, [key]: e.target.value })
+                        handleVariableChange(key, e.target.value)
                       }
                       className="w-10 h-10 rounded border border-[var(--card-border)] cursor-pointer bg-transparent"
                     />
@@ -201,7 +223,7 @@ export default function ThemeDetail({
                       type="text"
                       value={variables[key]}
                       onChange={(e) =>
-                        setVariables({ ...variables, [key]: e.target.value })
+                        handleVariableChange(key, e.target.value)
                       }
                       className="flex-1 bg-[var(--background)] border border-[var(--card-border)] rounded px-3 py-2 text-sm font-mono text-[var(--foreground)] focus:outline-none focus:border-[var(--accent)]"
                     />

@@ -6,6 +6,9 @@
     <title>Google Map Embed Preview</title>
     <link rel="stylesheet" href="map.css">
     <style>
+        :root {
+            --kit-map-min-height: 350px;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -30,7 +33,7 @@
         }
         .map-placeholder {
             width: 100%;
-            min-height: 350px;
+            min-height: var(--kit-map-min-height);
             background: #2a2218;
             border-radius: 8px;
             display: flex;
@@ -55,15 +58,15 @@
             <div class="visit-us__info">
                 <div class="visit-us__detail">
                     <h3>Location</h3>
-                    <p>123 Main Street<br>City, ST 00000</p>
+                    <p data-var="address">123 Main Street<br>City, ST 00000</p>
                 </div>
                 <div class="visit-us__detail">
                     <h3>Hours</h3>
-                    <p>Monday &ndash; Friday: 11am &ndash; 10pm<br>Saturday &ndash; Sunday: 10am &ndash; 11pm</p>
+                    <p data-var="hours">Monday &ndash; Friday: 11am &ndash; 10pm<br>Saturday &ndash; Sunday: 10am &ndash; 11pm</p>
                 </div>
                 <div class="visit-us__detail">
                     <h3>Contact</h3>
-                    <p>(555) 000-0000<br>hello@example.com</p>
+                    <p data-var="phone-email">(555) 000-0000<br>hello@example.com</p>
                 </div>
             </div>
         </div>

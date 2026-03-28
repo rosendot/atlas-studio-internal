@@ -39,7 +39,7 @@ export interface ThemeData {
 }
 
 async function getKits(): Promise<KitData[]> {
-  const kitsDir = path.join(process.cwd(), "..", "kits");
+  const kitsDir = path.join(process.cwd(), "kits");
   const folders = await fs.readdir(kitsDir);
   const kits: KitData[] = [];
 
@@ -73,7 +73,7 @@ async function getKits(): Promise<KitData[]> {
 }
 
 async function getThemes(): Promise<ThemeData[]> {
-  const themesDir = path.join(process.cwd(), "..", "themes");
+  const themesDir = path.join(process.cwd(), "themes");
   let folders: string[];
   try {
     folders = await fs.readdir(themesDir);

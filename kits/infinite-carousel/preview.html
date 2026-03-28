@@ -6,12 +6,22 @@
     <title>Infinite Carousel Preview</title>
     <link rel="stylesheet" href="carousel.css">
     <style>
+        :root {
+            --kit-dot-color-active: #b42318;
+            --kit-arrow-bg: #ffffff;
+            --kit-arrow-hover-bg: #1a1a1a;
+            --kit-transition-speed: 0.5s;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             background: #faf6f0;
             padding: 3rem 1rem;
         }
+        .carousel__dot--active { background: var(--kit-dot-color-active) !important; }
+        .carousel__arrow { background: var(--kit-arrow-bg) !important; transition: background var(--kit-transition-speed); }
+        .carousel__arrow:hover { background: var(--kit-arrow-hover-bg) !important; color: #fff; }
+        .carousel__track { transition-duration: var(--kit-transition-speed) !important; }
         h2 {
             text-align: center;
             font-size: 2rem;

@@ -12,14 +12,37 @@
     <link rel="stylesheet" href="../../kits/google-map-embed/map.css">
     <!-- Theme CSS -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --theme-color-primary: #b42318;
+            --theme-color-secondary: #d4a017;
+            --theme-color-dark: #1a1208;
+            --theme-color-cream: #faf6f0;
+        }
+        .navbar { background: var(--theme-color-dark) !important; }
+        .hero { background-color: var(--theme-color-dark) !important; }
+        .hero__label { color: var(--theme-color-secondary) !important; }
+        .btn--primary { background: var(--theme-color-primary) !important; border-color: var(--theme-color-primary) !important; }
+        .btn--nav { background: var(--theme-color-primary) !important; border-color: var(--theme-color-primary) !important; }
+        .section--cream { background: var(--theme-color-cream) !important; }
+        .section--dark { background: var(--theme-color-dark) !important; }
+        .section__title { color: var(--theme-color-dark) !important; }
+        .section--dark .section__title { color: var(--theme-color-secondary) !important; }
+        .carousel__dot--active { background: var(--theme-color-primary) !important; }
+        .featured-card__price { color: var(--theme-color-primary) !important; }
+        .nav-brand a { color: var(--theme-color-secondary) !important; }
+        .footer__brand { color: var(--theme-color-secondary) !important; }
+        .footer__title { color: var(--theme-color-secondary) !important; }
+        .site-footer { background: var(--theme-color-dark) !important; }
+    </style>
 </head>
 <body>
 
 <!-- ============ NAVBAR (kit: mobile-nav) ============ -->
 <nav class="navbar">
     <div class="nav-brand">
-        <a href="#">Restaurant Name</a>
-        <span class="nav-brand__address">123 Main Street, City, ST 00000</span>
+        <a href="#" data-var="business-name">Restaurant Name</a>
+        <span class="nav-brand__address" data-var="address-line-1">123 Main Street, City, ST 00000</span>
     </div>
 
     <button class="nav-toggle" aria-label="Toggle navigation">
@@ -42,8 +65,8 @@
 <section class="hero">
     <div class="hero__content">
         <p class="hero__label">Welcome to</p>
-        <h1 class="hero__title">Restaurant Name</h1>
-        <p class="hero__text">Bold flavors and family tradition &mdash; every dish is crafted with recipes passed down through generations.</p>
+        <h1 class="hero__title" data-var="hero-title">Restaurant Name</h1>
+        <p class="hero__text" data-var="hero-text">Bold flavors and family tradition &mdash; every dish is crafted with recipes passed down through generations.</p>
         <div class="hero__buttons">
             <a href="#" class="btn btn--primary">Order Online</a>
             <a href="#" class="btn btn--outline">Our Story</a>
@@ -143,17 +166,20 @@
         <div class="visit-us__info">
             <div class="visit-us__detail">
                 <h3>Location</h3>
-                <p>123 Main Street<br>City, ST 00000</p>
+                <p data-var="address-line-1">123 Main Street</p>
+                <p data-var="address-line-2">City, ST 00000</p>
             </div>
             <div class="visit-us__detail">
                 <h3>Hours</h3>
-                <p>Mon&ndash;Fri: 11am &ndash; 10pm<br>Sat&ndash;Sun: 10am &ndash; 11pm</p>
+                <p data-var="hours-weekday">Mon&ndash;Fri: 11am &ndash; 10pm</p>
+                <p data-var="hours-weekend">Sat&ndash;Sun: 10am &ndash; 11pm</p>
             </div>
             <div class="visit-us__detail">
                 <h3>Contact</h3>
-                <p>(555) 000-0000<br>hello@example.com</p>
+                <p data-var="phone">(555) 000-0000</p>
+                <p data-var="email">hello@example.com</p>
             </div>
-            <a href="#" class="btn btn--primary">Call (555) 000-0000</a>
+            <a href="#" class="btn btn--primary" data-var="phone">Call (555) 000-0000</a>
         </div>
     </div>
 </section>
@@ -183,14 +209,15 @@
     <div class="footer__grid">
         <div class="footer__contact">
             <h4 class="footer__title">Contact Us</h4>
-            <p>123 Main Street<br>City, ST 00000</p>
-            <p>(555) 000-0000</p>
-            <p>hello@example.com</p>
+            <p data-var="address-line-1">123 Main Street</p>
+            <p data-var="address-line-2">City, ST 00000</p>
+            <p data-var="phone">(555) 000-0000</p>
+            <p data-var="email">hello@example.com</p>
         </div>
 
         <div class="footer__brand-col">
-            <div class="footer__brand">Restaurant Name</div>
-            <p class="footer__tagline">Authentic Kitchen</p>
+            <div class="footer__brand" data-var="business-name">Restaurant Name</div>
+            <p class="footer__tagline" data-var="tagline">Authentic Kitchen</p>
             <div class="footer__social">
                 <a href="#" aria-label="Facebook" class="footer__social-link">FB</a>
                 <a href="#" aria-label="Instagram" class="footer__social-link">IG</a>
@@ -199,13 +226,13 @@
 
         <div class="footer__hours">
             <h4 class="footer__title">Opening Hours</h4>
-            <p>Monday &ndash; Friday<br>11:00am &ndash; 10:00pm</p>
-            <p>Saturday &ndash; Sunday<br>10:00am &ndash; 11:00pm</p>
+            <p data-var="hours-weekday">Monday &ndash; Friday: 11:00am &ndash; 10:00pm</p>
+            <p data-var="hours-weekend">Saturday &ndash; Sunday: 10:00am &ndash; 11:00pm</p>
         </div>
     </div>
 
     <div class="footer__bottom">
-        <p>&copy; 2026 Restaurant Name. All rights reserved.</p>
+        <p>&copy; 2026 <span data-var="business-name">Restaurant Name</span>. All rights reserved.</p>
     </div>
 </footer>
 

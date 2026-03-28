@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import type { KitData } from "../page";
 
 const LANG_COLORS: Record<string, string> = {
@@ -26,6 +26,22 @@ export default function KitDetail({
       Object.entries(kit.variables).map(([key, v]) => [key, v.default])
     )
   );
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+
+  // Send variable updates to the preview iframe
+  useEffect(() => {
+    const iframe = iframeRef.current;
+    if (iframe?.contentWindow) {
+      iframe.contentWindow.postMessage(
+        { type: "update-variables", variables },
+        "*"
+      );
+    }
+  }, [variables]);
+
+  const handleVariableChange = (key: string, value: string | number) => {
+    setVariables((prev) => ({ ...prev, [key]: value }));
+  };
 
   return (
     <div className="min-h-[calc(100vh-57px)]">
@@ -72,9 +88,17 @@ export default function KitDetail({
           {activeTab === "preview" ? (
             <div className="h-[calc(100vh-180px)]">
               <iframe
+                ref={iframeRef}
                 src={`/api/kit-preview/${kit.slug}`}
                 className="w-full h-full border-0"
                 title={`${kit.name} preview`}
+                onLoad={() => {
+                  // Send initial variables once iframe loads
+                  iframeRef.current?.contentWindow?.postMessage(
+                    { type: "update-variables", variables },
+                    "*"
+                  );
+                }}
               />
             </div>
           ) : (
@@ -184,7 +208,7 @@ export default function KitDetail({
                               : "#b42318"
                           }
                           onChange={(e) =>
-                            setVariables({ ...variables, [key]: e.target.value })
+                            handleVariableChange(key, e.target.value)
                           }
                           className="w-8 h-8 rounded border border-[var(--card-border)] cursor-pointer bg-transparent"
                         />
@@ -192,7 +216,7 @@ export default function KitDetail({
                           type="text"
                           value={variables[key]}
                           onChange={(e) =>
-                            setVariables({ ...variables, [key]: e.target.value })
+                            handleVariableChange(key, e.target.value)
                           }
                           className="flex-1 bg-[var(--card-bg)] border border-[var(--card-border)] rounded px-2 py-1.5 text-xs font-mono text-[var(--foreground)] focus:outline-none focus:border-[var(--accent)]"
                         />
@@ -202,10 +226,7 @@ export default function KitDetail({
                         type="number"
                         value={variables[key]}
                         onChange={(e) =>
-                          setVariables({
-                            ...variables,
-                            [key]: Number(e.target.value),
-                          })
+                          handleVariableChange(key, Number(e.target.value))
                         }
                         className="w-full bg-[var(--card-bg)] border border-[var(--card-border)] rounded px-2 py-1.5 text-xs font-mono text-[var(--foreground)] focus:outline-none focus:border-[var(--accent)]"
                       />
@@ -214,7 +235,7 @@ export default function KitDetail({
                         type="text"
                         value={variables[key]}
                         onChange={(e) =>
-                          setVariables({ ...variables, [key]: e.target.value })
+                          handleVariableChange(key, e.target.value)
                         }
                         className="w-full bg-[var(--card-bg)] border border-[var(--card-border)] rounded px-2 py-1.5 text-xs font-mono text-[var(--foreground)] focus:outline-none focus:border-[var(--accent)]"
                       />

@@ -6,7 +6,7 @@ A personal knowledge base, reusable toolkit, and internal dashboard for building
 
 | Folder | Purpose |
 |--------|---------|
-| `dashboard/` | Next.js dashboard — browse kits and themes visually with live previews, code viewer, and variable customization |
+| `app/` | Next.js dashboard UI — browse kits and themes visually with live previews, code viewer, and variable customization |
 | `kits/` | Self-contained feature kits — each has all files (JS, CSS, PHP), a README, kit.json, and preview.html |
 | `themes/` | Complete themes with placeholder content — copy into a project, swap placeholders, deploy |
 | `plugins/` | Structured plugin registry — individual JSON files with costs, licensing, install conditions |
@@ -15,7 +15,6 @@ A personal knowledge base, reusable toolkit, and internal dashboard for building
 ## Dashboard
 
 ```bash
-cd dashboard
 npm install
 npm run dev
 # Open http://localhost:3000

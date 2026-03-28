@@ -12,8 +12,7 @@ export async function GET(
   { params }: { params: Promise<{ path: string[] }> }
 ) {
   const { path: segments } = await params;
-  // segments[0] = theme slug, rest = file path within theme
-  const filePath = path.join(process.cwd(), "..", "themes", ...segments);
+  const filePath = path.join(process.cwd(), "kits", ...segments);
 
   try {
     const content = await fs.readFile(filePath, "utf-8");

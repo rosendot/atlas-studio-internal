@@ -7,7 +7,7 @@ export async function GET(
   { params }: { params: Promise<{ slug: string }> }
 ) {
   const { slug } = await params;
-  const themesDir = path.join(process.cwd(), "..", "themes");
+  const themesDir = path.join(process.cwd(), "themes");
   const previewPath = path.join(themesDir, slug, "preview.html");
 
   try {
@@ -29,6 +29,27 @@ export async function GET(
       /href="((?!http|\/)[^"]+\.css)"/g,
       (_, filePath) => `href="/api/theme-file/${slug}/${filePath}"`
     );
+
+    // Inject variable listener script before </body>
+    const listenerScript = `
+<script>
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.type === 'update-variables') {
+    var vars = e.data.variables;
+    var root = document.documentElement;
+    for (var key in vars) {
+      root.style.setProperty('--theme-' + key.replace(/_/g, '-'), String(vars[key]));
+      // Update text content via data-var attributes
+      var els = document.querySelectorAll('[data-var="' + key.replace(/_/g, '-') + '"]');
+      for (var i = 0; i < els.length; i++) {
+        els[i].innerHTML = String(vars[key]).replace(/\\n/g, '<br>');
+      }
+    }
+  }
+});
+</script>`;
+
+    html = html.replace("</body>", listenerScript + "\n</body>");
 
     return new NextResponse(html, {
       headers: { "Content-Type": "text/html; charset=utf-8" },

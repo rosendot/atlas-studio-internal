@@ -6,18 +6,16 @@ Personal knowledge base, reusable toolkit, and internal dashboard for building W
 
 ```
 wp-agency-vault/
-├── dashboard/               # Next.js dashboard UI (TypeScript + Tailwind)
-│   ├── app/
-│   │   ├── components/      # Dashboard, KitBrowser, KitDetail, ThemeBrowser, ThemeDetail
-│   │   ├── api/
-│   │   │   ├── kit-preview/ # Serves kit preview.html with correct asset paths
-│   │   │   ├── kit-file/    # Serves kit static files (CSS, JS)
-│   │   │   ├── theme-preview/ # Serves theme preview.html
-│   │   │   └── theme-file/  # Serves theme static files
-│   │   ├── page.tsx         # Reads kit.json + theme.json at build time
-│   │   ├── layout.tsx       # Root layout
-│   │   └── globals.css      # Dark theme variables
-│   └── package.json
+├── app/                     # Next.js dashboard UI (TypeScript + Tailwind)
+│   ├── components/          # Dashboard, KitBrowser, KitDetail, ThemeBrowser, ThemeDetail
+│   ├── api/
+│   │   ├── kit-preview/     # Serves kit preview.html with correct asset paths
+│   │   ├── kit-file/        # Serves kit static files (CSS, JS)
+│   │   ├── theme-preview/   # Serves theme preview.html
+│   │   └── theme-file/      # Serves theme static files
+│   ├── page.tsx             # Reads kit.json + theme.json at build time
+│   ├── layout.tsx           # Root layout
+│   └── globals.css          # Dark theme variables
 ├── kits/                    # Ready-to-ship feature kits (grab and go)
 │   ├── infinite-carousel/   # Carousel with infinite loop, arrows, swipe
 │   ├── mobile-nav/          # Responsive hamburger menu
@@ -35,7 +33,7 @@ wp-agency-vault/
 
 ## Dashboard UI
 
-Run with `cd dashboard && npm run dev` → http://localhost:3000
+Run with `npm run dev` → http://localhost:3000
 
 Two tabs: **Themes** and **Kits**.
 
