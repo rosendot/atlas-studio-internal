@@ -90,6 +90,33 @@ Plugins have a `buy_when` field: `day-1` (buy before first client) or `later` (b
 - Themes reference kits, never duplicate kit code
 - PHP follows WordPress coding standards (tabs for indentation, snake_case functions)
 
+## Rules
+
+### Kit integrity
+- When creating or modifying a kit, always ensure `kit.json` `files` array matches actual files on disk
+- Never create a kit without `kit.json`, `preview.html`, and `README.md`
+- Run `/audit-kit <slug>` after any kit changes to validate
+
+### Theme-kit boundary
+- Themes must reference kits via `kits_used` in `theme.json` — never copy kit code into a theme folder
+- Kit CSS/JS paths in `theme.json` `kit_files` must point to real files in `kits/`
+
+### Security
+- Never create, stage, or display `.env` files, API keys, or database credentials
+- All PHP output must be escaped: `esc_html()`, `esc_attr()`, `esc_url()`, `wp_kses_post()`
+- All form handling must use nonces (`wp_nonce_field` / `wp_verify_nonce`)
+- All user input must be sanitized before saving (`sanitize_text_field`, etc.)
+
+### Dashboard consistency
+- All new kits and themes must be browsable in the dashboard
+- Every kit needs a valid `kit.json` and working `preview.html`
+- Every theme needs a valid `theme.json` and working `preview.html`
+
+### Git hygiene
+- Never commit `vendor/`, `web/wp/`, `node_modules/`, `web/app/plugins/`, or `web/app/uploads/`
+- Never force-push or hard-reset without explicit confirmation
+- Stage files by name — never use `git add -A` or `git add .`
+
 ## Stack
 
 - **Next.js + TypeScript + Tailwind** — Dashboard UI
