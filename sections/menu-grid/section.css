@@ -1,0 +1,194 @@
+/* ==========================================================================
+   Menu Grid Section
+   Responsive card grid with category tabs and price badges.
+   All colors reference CSS custom properties set by the active palette.
+   ========================================================================== */
+
+.menu-grid {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 4rem 1.5rem;
+}
+
+/* --- Header --- */
+
+.menu-grid__header {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.menu-grid__title {
+	font-family: var(--font-heading);
+	font-size: 2.25rem;
+	font-weight: 700;
+	color: var(--color-dark);
+	margin: 0 0 0.5rem;
+}
+
+.menu-grid__subtitle {
+	font-family: var(--font-body);
+	font-size: 1.1rem;
+	color: var(--color-text-light);
+	margin: 0;
+}
+
+/* --- Category Tabs --- */
+
+.menu-grid__tabs {
+	display: flex;
+	gap: 0.5rem;
+	justify-content: center;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	padding: 0.25rem 0 1.5rem;
+	margin-bottom: 1rem;
+	scrollbar-width: thin;
+}
+
+.menu-grid__tab {
+	font-family: var(--font-body);
+	font-size: 0.9rem;
+	font-weight: 600;
+	padding: 0.5rem 1.25rem;
+	border: 2px solid var(--color-border);
+	border-radius: 9999px;
+	background: transparent;
+	color: var(--color-text);
+	cursor: pointer;
+	white-space: nowrap;
+	transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.menu-grid__tab:hover {
+	border-color: var(--color-primary);
+	color: var(--color-primary);
+}
+
+.menu-grid__tab--active {
+	background: var(--color-primary);
+	border-color: var(--color-primary);
+	color: #fff;
+}
+
+/* --- Grid --- */
+
+.menu-grid__items {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	gap: 1.5rem;
+}
+
+/* --- Card --- */
+
+.menu-grid__card {
+	background: #fff;
+	border-radius: 0.75rem;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+	overflow: hidden;
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.menu-grid__card:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Photo --- */
+
+.menu-grid__photo {
+	aspect-ratio: 4 / 3;
+	overflow: hidden;
+	background: var(--color-cream);
+}
+
+.menu-grid__photo img,
+.menu-grid__img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.menu-grid__photo--placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--color-cream);
+}
+
+.menu-grid__photo-icon {
+	font-size: 2.5rem;
+	opacity: 0.5;
+}
+
+/* --- Info --- */
+
+.menu-grid__info {
+	padding: 1.25rem;
+}
+
+.menu-grid__name {
+	font-family: var(--font-heading);
+	font-size: 1.15rem;
+	font-weight: 700;
+	color: var(--color-dark);
+	margin: 0 0 0.4rem;
+}
+
+.menu-grid__desc {
+	font-family: var(--font-body);
+	font-size: 0.9rem;
+	line-height: 1.5;
+	color: var(--color-text-light);
+	margin: 0 0 0.75rem;
+}
+
+.menu-grid__price {
+	display: inline-block;
+	font-family: var(--font-body);
+	font-size: 0.85rem;
+	font-weight: 700;
+	padding: 0.3rem 0.75rem;
+	background: var(--color-primary);
+	color: #fff;
+	border-radius: 9999px;
+}
+
+/* --- Empty State --- */
+
+.menu-grid__empty {
+	text-align: center;
+	color: var(--color-text-light);
+	font-family: var(--font-body);
+	padding: 3rem 0;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 768px) {
+	.menu-grid__items {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+	}
+
+	.menu-grid__title {
+		font-size: 1.75rem;
+	}
+
+	.menu-grid {
+		padding: 3rem 1rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.menu-grid__items {
+		grid-template-columns: 1fr;
+	}
+
+	.menu-grid__tabs {
+		justify-content: flex-start;
+	}
+}

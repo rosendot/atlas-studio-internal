@@ -8,7 +8,8 @@ A personal knowledge base, reusable toolkit, and internal dashboard for building
 |--------|---------|
 | `app/` | Next.js dashboard UI — browse templates, kits, and palettes with live previews and variable customization |
 | `kits/` | Self-contained feature kits — each has all files (JS, CSS, PHP), a README, kit.json, and preview.html |
-| `palettes/` | Color systems + typography — mix and match with any template |
+| `palettes/` | Color systems + typography — mix and match with any section or template |
+| `sections/` | Pre-built page sections — different layout structures for the same content type |
 | `templates/` | Full page layouts with placeholder content — compose kits, pick a palette, swap placeholders, deploy |
 | `plugins/` | Structured plugin registry — individual JSON files with costs, licensing, install conditions |
 | `guides/` | Step-by-step reference docs — Bedrock setup, LocalWP config, design process, agency flow |
@@ -21,9 +22,10 @@ npm run dev
 # Open http://localhost:3000
 ```
 
-Three tabs: **Templates**, **Kits**, and **Palettes**.
+Four tabs: **Templates**, **Sections**, **Kits**, and **Palettes**.
 
-- **Templates** — Browse page layouts with live previews, view source code, swap palettes to see different color schemes, edit content variables
+- **Templates** — Browse full page layouts with live previews, swap palettes, edit content variables
+- **Sections** — Browse pre-built page sections (menu layouts, hero styles, etc.), swap palettes, compare structures
 - **Kits** — Browse individual components with live previews, view code, see tags/variants/dependencies
 - **Palettes** — Browse color systems with swatches, font previews, and CSS custom property output
 
@@ -36,6 +38,14 @@ Three tabs: **Templates**, **Kits**, and **Palettes**.
 | `google-map-embed/` | Section | Google Maps iframe embed with contact info grid |
 | `faq-accordion/` | Interactive | Expandable Q&A accordion with smooth animations |
 | `mega-menu/` | Navigation | Full-width hover dropdown with multi-column panels |
+
+## Sections
+
+| Section | Category | Layout | Description |
+|---------|----------|--------|-------------|
+| `menu-list/` | Menu | List | Classic vertical list with dotted leaders, grouped by category |
+| `menu-grid/` | Menu | Grid | Responsive card grid with category filter tabs |
+| `menu-cards/` | Menu | Cards | Large editorial cards with photo overlays, magazine style |
 
 ## Palettes
 
@@ -70,6 +80,7 @@ Organized by `plugins/core/`, `plugins/restaurant/`, `plugins/service/`. Each pl
 
 - **New kit** — `/new-kit <name>` or create a folder in `kits/` with source files, README.md, kit.json, and preview.html
 - **New palette** — `/new-palette <name>` or create a folder in `palettes/` with palette.json
+- **New section** — `/new-section <name>` or create a folder in `sections/` with section.json, section.php, section.css, preview.html, README.md
 - **New template** — `/new-template <name>` or create a folder in `templates/` with PHP templates, template.json, preview.html, and README.md. Reference kits via `kits_used` and a palette via `default_palette`
 - **New plugin** — `/new-plugin <name>` or add a JSON file to the appropriate `plugins/` subdirectory
 - **New guide** — Add a markdown file to `guides/`

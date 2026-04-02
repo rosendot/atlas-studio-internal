@@ -1,0 +1,188 @@
+/* ==========================================================================
+   Menu List Section
+   Classic vertical menu list grouped by category.
+   ========================================================================== */
+
+.menu-list {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 4rem 1.5rem;
+	background-color: var(--color-cream);
+	color: var(--color-text);
+	font-family: var(--font-body);
+}
+
+/* ---------- Section Header ---------- */
+
+.menu-list__header {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+.menu-list__title {
+	font-family: var(--font-heading);
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: var(--color-dark);
+	margin: 0 0 0.5rem;
+}
+
+.menu-list__subtitle {
+	font-size: 1.125rem;
+	color: var(--color-text-light);
+	margin: 0;
+	font-style: italic;
+}
+
+/* ---------- Category ---------- */
+
+.menu-list__category {
+	margin-bottom: 2.5rem;
+}
+
+.menu-list__category-heading {
+	font-family: var(--font-heading);
+	font-size: 1.75rem;
+	font-weight: 600;
+	color: var(--color-primary);
+	margin: 0 0 0.25rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.menu-list__category-underline {
+	display: block;
+	width: 60px;
+	height: 3px;
+	background-color: var(--color-secondary);
+	margin-top: 0.5rem;
+	margin-bottom: 1rem;
+	border-radius: 2px;
+}
+
+.menu-list__category-description {
+	font-size: 0.95rem;
+	color: var(--color-text-light);
+	margin: 0 0 1.25rem;
+	font-style: italic;
+}
+
+/* ---------- Item ---------- */
+
+.menu-list__item {
+	display: flex;
+	align-items: flex-start;
+	gap: 1rem;
+	padding: 0.75rem 0;
+	border-bottom: 1px solid var(--color-border);
+}
+
+.menu-list__item:last-child {
+	border-bottom: none;
+}
+
+.menu-list__item-content {
+	flex: 1;
+	min-width: 0;
+}
+
+.menu-list__item-row {
+	display: flex;
+	align-items: baseline;
+	gap: 0.5rem;
+}
+
+.menu-list__item-name {
+	font-family: var(--font-heading);
+	font-size: 1.125rem;
+	font-weight: 600;
+	color: var(--color-dark);
+	white-space: nowrap;
+	flex-shrink: 0;
+}
+
+.menu-list__item-leader {
+	flex: 1;
+	border-bottom: 2px dotted var(--color-border);
+	min-width: 2rem;
+	position: relative;
+	top: -4px;
+}
+
+.menu-list__item-price {
+	font-family: var(--font-heading);
+	font-size: 1.125rem;
+	font-weight: 700;
+	color: var(--color-primary);
+	white-space: nowrap;
+	flex-shrink: 0;
+}
+
+/* ---------- Description ---------- */
+
+.menu-list__description {
+	font-size: 0.9rem;
+	color: var(--color-text-light);
+	margin: 0.25rem 0 0;
+	line-height: 1.5;
+}
+
+/* ---------- Photo Thumbnail ---------- */
+
+.menu-list__photo {
+	width: 60px;
+	height: 60px;
+	border-radius: 8px;
+	overflow: hidden;
+	flex-shrink: 0;
+}
+
+.menu-list__photo-img,
+.menu-list__photo-placeholder {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+/* ---------- Responsive (768px) ---------- */
+
+@media (max-width: 768px) {
+	.menu-list {
+		padding: 2.5rem 1rem;
+	}
+
+	.menu-list__title {
+		font-size: 2rem;
+	}
+
+	.menu-list__subtitle {
+		font-size: 1rem;
+	}
+
+	.menu-list__category-heading {
+		font-size: 1.375rem;
+	}
+
+	.menu-list__item {
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.menu-list__photo {
+		width: 50px;
+		height: 50px;
+	}
+
+	.menu-list__item-name {
+		font-size: 1rem;
+	}
+
+	.menu-list__item-price {
+		font-size: 1rem;
+	}
+
+	.menu-list__description {
+		font-size: 0.85rem;
+	}
+}

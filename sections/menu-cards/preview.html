@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Menu Cards Preview</title>
+	<style>
+		/* Ember Hearth palette defaults */
+		:root {
+			--color-primary: #b42318;
+			--color-primary-dark: #8c1a11;
+			--color-secondary: #d4a017;
+			--color-dark: #1a1208;
+			--color-cream: #faf6f0;
+			--color-text: #2c2416;
+			--color-text-light: #6b5e4f;
+			--color-border: #e0d6c8;
+			--color-white: #ffffff;
+			--font-heading: Georgia, 'Times New Roman', serif;
+			--font-body: 'Inter', -apple-system, sans-serif;
+		}
+
+		*, *::before, *::after { box-sizing: border-box; }
+
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: var(--font-body);
+			background: var(--color-cream);
+			color: var(--color-text);
+		}
+
+		/* Placeholder photo blocks */
+		.placeholder-photo {
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+	</style>
+	<link rel="stylesheet" href="section.css">
+</head>
+<body>
+
+<section class="menu-cards" id="featured-dishes">
+	<div class="menu-cards__header">
+		<h2 class="menu-cards__title">Featured Dishes</h2>
+		<p class="menu-cards__subtitle">Chef's favorites, crafted with care</p>
+	</div>
+
+	<!-- Card 1: Default (bottom-up gradient) -->
+	<article class="menu-cards__item">
+		<div class="menu-cards__photo">
+			<div class="placeholder-photo" style="background: linear-gradient(135deg, #8c1a11 0%, #d4a017 100%);"></div>
+			<span class="menu-cards__name">Braised Short Ribs</span>
+		</div>
+		<div class="menu-cards__body">
+			<p class="menu-cards__description">
+				Slow-braised for eight hours in a rich red wine reduction, served over creamy polenta
+				with roasted root vegetables and a drizzle of aged balsamic. A house favorite since
+				the very beginning.
+			</p>
+			<div class="menu-cards__meta">
+				<span class="menu-cards__price">$34.00</span>
+				<a href="#" class="menu-cards__cta">Order</a>
+			</div>
+		</div>
+	</article>
+
+	<!-- Card 2: Alt (top-down gradient) -->
+	<article class="menu-cards__item menu-cards__item--alt">
+		<div class="menu-cards__photo">
+			<div class="placeholder-photo" style="background: linear-gradient(135deg, #2c5530 0%, #88b04b 100%);"></div>
+			<span class="menu-cards__name">Pan-Seared Salmon</span>
+		</div>
+		<div class="menu-cards__body">
+			<p class="menu-cards__description">
+				Wild-caught Atlantic salmon with a crispy skin, resting on a bed of sauteed spinach
+				and fingerling potatoes. Finished with a bright lemon-dill beurre blanc and microgreens.
+			</p>
+			<div class="menu-cards__meta">
+				<span class="menu-cards__price">$28.00</span>
+				<a href="#" class="menu-cards__cta">Order</a>
+			</div>
+		</div>
+	</article>
+
+	<!-- Card 3: Default -->
+	<article class="menu-cards__item">
+		<div class="menu-cards__photo">
+			<div class="placeholder-photo" style="background: linear-gradient(135deg, #4a3728 0%, #c8956c 100%);"></div>
+			<span class="menu-cards__name">Truffle Mushroom Risotto</span>
+		</div>
+		<div class="menu-cards__body">
+			<p class="menu-cards__description">
+				Arborio rice slowly stirred with a medley of wild mushrooms, finished with black truffle
+				oil and shaved Parmigiano-Reggiano. Rich, earthy, and impossibly creamy. Available as a
+				main or a side.
+			</p>
+			<div class="menu-cards__meta">
+				<span class="menu-cards__price">$22.00</span>
+				<a href="#" class="menu-cards__cta">Order</a>
+			</div>
+		</div>
+	</article>
+
+	<!-- Card 4: Alt -->
+	<article class="menu-cards__item menu-cards__item--alt">
+		<div class="menu-cards__photo">
+			<div class="placeholder-photo" style="background: linear-gradient(135deg, #1a1208 0%, #b42318 100%);"></div>
+			<span class="menu-cards__name">Dark Chocolate Lava Cake</span>
+		</div>
+		<div class="menu-cards__body">
+			<p class="menu-cards__description">
+				Warm Valrhona chocolate cake with a molten center, served with vanilla bean gelato
+				and a scattering of candied hazelnuts. Allow twelve minutes — it is baked to order
+				and worth every second.
+			</p>
+			<div class="menu-cards__meta">
+				<span class="menu-cards__price">$14.00</span>
+				<a href="#" class="menu-cards__cta">Order</a>
+			</div>
+		</div>
+	</article>
+</section>
+
+</body>
+</html>

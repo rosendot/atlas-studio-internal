@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Menu Grid Preview</title>
+
+	<!-- Ember-Hearth palette defaults -->
+	<style>
+		:root {
+			--color-primary: #b42318;
+			--color-primary-dark: #8c1a11;
+			--color-secondary: #d4a017;
+			--color-dark: #1a1208;
+			--color-cream: #faf6f0;
+			--color-text: #2c2416;
+			--color-text-light: #6b5e4f;
+			--color-border: #e0d6c8;
+			--color-white: #ffffff;
+			--font-heading: Georgia, 'Times New Roman', serif;
+			--font-body: 'Inter', -apple-system, sans-serif;
+		}
+
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			background: var(--color-cream);
+			color: var(--color-text);
+			font-family: var(--font-body);
+		}
+
+		/* Placeholder photo colors */
+		.ph-red    { background: #c0392b; }
+		.ph-amber  { background: #d4a017; }
+		.ph-green  { background: #27ae60; }
+		.ph-brown  { background: #8c6239; }
+		.ph-orange { background: #e67e22; }
+		.ph-teal   { background: #16a085; }
+	</style>
+
+	<link rel="stylesheet" href="section.css" />
+</head>
+<body>
+
+<section class="menu-grid">
+	<div class="menu-grid__header">
+		<h2 class="menu-grid__title">Our Menu</h2>
+		<p class="menu-grid__subtitle">Tap a category to filter</p>
+	</div>
+
+	<div class="menu-grid__tabs" role="tablist">
+		<button class="menu-grid__tab menu-grid__tab--active" type="button" role="tab" aria-selected="true" data-category="all">All</button>
+		<button class="menu-grid__tab" type="button" role="tab" aria-selected="false" data-category="appetizers">Appetizers</button>
+		<button class="menu-grid__tab" type="button" role="tab" aria-selected="false" data-category="entrees">Entrees</button>
+	</div>
+
+	<div class="menu-grid__items">
+
+		<!-- Card 1 — Appetizer -->
+		<article class="menu-grid__card" data-categories="appetizers">
+			<div class="menu-grid__photo ph-red"></div>
+			<div class="menu-grid__info">
+				<h3 class="menu-grid__name">Bruschetta Trio</h3>
+				<p class="menu-grid__desc">Toasted ciabatta topped with tomato basil, roasted pepper, and olive tapenade.</p>
+				<span class="menu-grid__price">$12.00</span>
+			</div>
+		</article>
+
+		<!-- Card 2 — Appetizer -->
+		<article class="menu-grid__card" data-categories="appetizers">
+			<div class="menu-grid__photo ph-amber"></div>
+			<div class="menu-grid__info">
+				<h3 class="menu-grid__name">Crispy Calamari</h3>
+				<p class="menu-grid__desc">Lightly battered and fried, served with lemon aioli and marinara.</p>
+				<span class="menu-grid__price">$14.00</span>
+			</div>
+		</article>
+
+		<!-- Card 3 — Entree -->
+		<article class="menu-grid__card" data-categories="entrees">
+			<div class="menu-grid__photo ph-green"></div>
+			<div class="menu-grid__info">
+				<h3 class="menu-grid__name">Grilled Salmon</h3>
+				<p class="menu-grid__desc">Atlantic salmon with herb butter, roasted vegetables, and lemon rice.</p>
+				<span class="menu-grid__price">$26.00</span>
+			</div>
+		</article>
+
+		<!-- Card 4 — Entree -->
+		<article class="menu-grid__card" data-categories="entrees">
+			<div class="menu-grid__photo ph-brown"></div>
+			<div class="menu-grid__info">
+				<h3 class="menu-grid__name">Braised Short Rib</h3>
+				<p class="menu-grid__desc">Slow-cooked beef short rib with creamy polenta and red wine reduction.</p>
+				<span class="menu-grid__price">$32.00</span>
+			</div>
+		</article>
+
+		<!-- Card 5 — Appetizer -->
+		<article class="menu-grid__card" data-categories="appetizers">
+			<div class="menu-grid__photo ph-orange"></div>
+			<div class="menu-grid__info">
+				<h3 class="menu-grid__name">Stuffed Mushrooms</h3>
+				<p class="menu-grid__desc">Cremini caps filled with herbed cream cheese and parmesan breadcrumbs.</p>
+				<span class="menu-grid__price">$11.00</span>
+			</div>
+		</article>
+
+		<!-- Card 6 — Entree -->
+		<article class="menu-grid__card" data-categories="entrees">
+			<div class="menu-grid__photo ph-teal"></div>
+			<div class="menu-grid__info">
+				<h3 class="menu-grid__name">Penne Arrabbiata</h3>
+				<p class="menu-grid__desc">Al dente penne in spicy tomato sauce with fresh basil and shaved pecorino.</p>
+				<span class="menu-grid__price">$18.00</span>
+			</div>
+		</article>
+
+	</div>
+</section>
+
+<script>
+(function () {
+	var tabs  = document.querySelectorAll('.menu-grid__tab');
+	var cards = document.querySelectorAll('.menu-grid__card');
+
+	tabs.forEach(function (tab) {
+		tab.addEventListener('click', function () {
+			tabs.forEach(function (t) {
+				t.classList.remove('menu-grid__tab--active');
+				t.setAttribute('aria-selected', 'false');
+			});
+			tab.classList.add('menu-grid__tab--active');
+			tab.setAttribute('aria-selected', 'true');
+
+			var category = tab.getAttribute('data-category');
+
+			cards.forEach(function (card) {
+				if (category === 'all') {
+					card.style.display = '';
+				} else {
+					var cats = (card.getAttribute('data-categories') || '').split(' ');
+					card.style.display = cats.indexOf(category) !== -1 ? '' : 'none';
+				}
+			});
+		});
+	});
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+/* ==========================================================================
+   Menu Cards — Editorial / Magazine Layout
+   ========================================================================== */
+
+.menu-cards {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 4rem 1.5rem;
+}
+
+/* ---------- Section Header ---------- */
+
+.menu-cards__header {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+.menu-cards__title {
+	font-family: var(--font-heading);
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: var(--color-dark);
+	margin: 0 0 0.5rem;
+	line-height: 1.2;
+}
+
+.menu-cards__subtitle {
+	font-family: var(--font-body);
+	font-size: 1.125rem;
+	color: var(--color-text-light);
+	margin: 0;
+}
+
+/* ---------- Card ---------- */
+
+.menu-cards__item {
+	margin-bottom: 3rem;
+	border-radius: 8px;
+	overflow: hidden;
+	background: var(--color-cream);
+	border: 1px solid var(--color-border);
+	transition: box-shadow 0.3s ease;
+}
+
+.menu-cards__item:hover {
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.menu-cards__item:last-child {
+	margin-bottom: 0;
+}
+
+/* ---------- Photo ---------- */
+
+.menu-cards__photo {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	overflow: hidden;
+	background: var(--color-dark);
+}
+
+.menu-cards__photo-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+/* Gradient overlay — bottom-up (default / odd cards) */
+.menu-cards__photo::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		to top,
+		rgba(0, 0, 0, 0.7) 0%,
+		rgba(0, 0, 0, 0.25) 40%,
+		transparent 100%
+	);
+	pointer-events: none;
+}
+
+/* Alt cards (even) — top-down gradient for variety */
+.menu-cards__item--alt .menu-cards__photo::after {
+	background: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0.55) 0%,
+		rgba(0, 0, 0, 0.15) 40%,
+		transparent 100%
+	);
+}
+
+/* No-image fallback */
+.menu-cards__photo--no-image {
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-start;
+	background: var(--color-dark);
+}
+
+/* ---------- Name Overlay ---------- */
+
+.menu-cards__name {
+	position: absolute;
+	bottom: 1.25rem;
+	left: 1.5rem;
+	right: 1.5rem;
+	font-family: var(--font-heading);
+	font-size: 2rem;
+	font-weight: 700;
+	color: #ffffff;
+	line-height: 1.2;
+	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+	z-index: 1;
+}
+
+/* Alt cards — name sits at the top */
+.menu-cards__item--alt .menu-cards__name {
+	bottom: auto;
+	top: 1.25rem;
+}
+
+/* ---------- Body ---------- */
+
+.menu-cards__body {
+	padding: 1.5rem;
+}
+
+.menu-cards__description {
+	font-family: var(--font-body);
+	font-size: 1rem;
+	line-height: 1.7;
+	color: var(--color-text);
+	margin: 0 0 1.25rem;
+}
+
+/* ---------- Meta (Price + CTA) ---------- */
+
+.menu-cards__meta {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.menu-cards__price {
+	font-family: var(--font-heading);
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: var(--color-primary);
+}
+
+.menu-cards__cta {
+	display: inline-block;
+	padding: 0.625rem 1.5rem;
+	font-family: var(--font-body);
+	font-size: 0.9375rem;
+	font-weight: 600;
+	color: #ffffff;
+	background: var(--color-primary);
+	border: none;
+	border-radius: 4px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.menu-cards__cta:hover {
+	background: var(--color-secondary);
+	transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 768px) {
+	.menu-cards {
+		padding: 3rem 1rem;
+	}
+
+	.menu-cards__title {
+		font-size: 2rem;
+	}
+
+	.menu-cards__name {
+		font-size: 1.5rem;
+	}
+
+	.menu-cards__price {
+		font-size: 1.25rem;
+	}
+
+	.menu-cards__item {
+		margin-bottom: 2rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.menu-cards {
+		padding: 2rem 0;
+	}
+
+	.menu-cards__header {
+		padding: 0 1rem;
+	}
+
+	.menu-cards__item {
+		border-radius: 0;
+		border-left: none;
+		border-right: none;
+	}
+
+	.menu-cards__photo {
+		aspect-ratio: 4 / 3;
+	}
+
+	.menu-cards__title {
+		font-size: 1.75rem;
+	}
+
+	.menu-cards__name {
+		font-size: 1.25rem;
+		left: 1rem;
+		right: 1rem;
+		bottom: 1rem;
+	}
+
+	.menu-cards__item--alt .menu-cards__name {
+		top: 1rem;
+	}
+
+	.menu-cards__body {
+		padding: 1.25rem 1rem;
+	}
+
+	.menu-cards__meta {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.menu-cards__cta {
+		width: 100%;
+		text-align: center;
+	}
+}

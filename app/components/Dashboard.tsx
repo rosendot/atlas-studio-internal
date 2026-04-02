@@ -1,24 +1,28 @@
 "use client";
 
 import { useState } from "react";
-import type { KitData, PaletteData, TemplateData } from "../page";
+import type { KitData, PaletteData, SectionData, TemplateData } from "../page";
 import KitBrowser from "./KitBrowser";
 import PaletteBrowser from "./PaletteBrowser";
+import SectionBrowser from "./SectionBrowser";
 import TemplateBrowser from "./TemplateBrowser";
 
 export default function Dashboard({
   kits,
   palettes,
+  sections,
   templates,
 }: {
   kits: KitData[];
   palettes: PaletteData[];
+  sections: SectionData[];
   templates: TemplateData[];
 }) {
-  const [activeTab, setActiveTab] = useState<"templates" | "kits" | "palettes">("templates");
+  const [activeTab, setActiveTab] = useState<"templates" | "sections" | "kits" | "palettes">("templates");
 
   const tabs = [
     { key: "templates" as const, label: "Templates", count: templates.length },
+    { key: "sections" as const, label: "Sections", count: sections.length },
     { key: "kits" as const, label: "Kits", count: kits.length },
     { key: "palettes" as const, label: "Palettes", count: palettes.length },
   ];
@@ -63,6 +67,9 @@ export default function Dashboard({
 
       {activeTab === "templates" && (
         <TemplateBrowser templates={templates} palettes={palettes} />
+      )}
+      {activeTab === "sections" && (
+        <SectionBrowser sections={sections} palettes={palettes} />
       )}
       {activeTab === "kits" && <KitBrowser kits={kits} />}
       {activeTab === "palettes" && <PaletteBrowser palettes={palettes} />}

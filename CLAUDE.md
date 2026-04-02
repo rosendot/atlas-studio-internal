@@ -7,7 +7,7 @@ Personal knowledge base, reusable toolkit, and internal dashboard for building W
 ```
 wp-agency-vault/
 ├── app/                     # Next.js dashboard UI (TypeScript + Tailwind)
-│   ├── components/          # Dashboard, TemplateBrowser, TemplateDetail, KitBrowser, KitDetail, PaletteBrowser, PaletteDetail
+│   ├── components/          # Dashboard, TemplateBrowser, SectionBrowser, KitBrowser, PaletteBrowser + Detail views
 │   ├── api/
 │   │   ├── kit-preview/     # Serves kit preview.html with correct asset paths
 │   │   ├── kit-file/        # Serves kit static files (CSS, JS)
@@ -22,8 +22,12 @@ wp-agency-vault/
 │   ├── google-map-embed/    # Maps iframe + contact info grid
 │   ├── faq-accordion/       # Expandable Q&A with animations
 │   └── mega-menu/           # Full-width hover dropdown navigation
-├── palettes/                # Color systems + typography (mix and match with templates)
-│   └── warm-restaurant/     # Rich reds, warm golds, serif headings
+├── palettes/                # Color systems + typography (mix and match with sections/templates)
+│   └── ember-hearth/        # Rich reds, warm golds, serif headings
+├── sections/                # Pre-built page sections focused on layout structure
+│   ├── menu-list/           # Classic vertical menu list
+│   ├── menu-grid/           # Responsive card grid with tabs
+│   └── menu-cards/          # Large editorial cards with overlays
 ├── templates/               # Full page layouts that compose kits + reference a palette
 │   └── restaurant-classic/  # Restaurant template with hero, carousel, map, gallery
 ├── plugins/                 # Structured plugin registry (JSON per plugin)
@@ -37,13 +41,19 @@ wp-agency-vault/
 
 Run with `npm run dev` → http://localhost:3000
 
-Three tabs: **Templates**, **Kits**, and **Palettes**.
+Four tabs: **Templates**, **Sections**, **Kits**, and **Palettes**.
 
 ### Templates tab
 - Browse templates as cards with live preview thumbnails
 - Search by name or tag
 - Click a template to see: full-page live preview, code viewer with file tabs, content variables, palette picker
 - Switch palettes to see the same layout with different color schemes
+
+### Sections tab
+- Browse pre-built page sections by category (menu, hero, faq, gallery, etc.)
+- Search by name or tag
+- Click a section to see: live preview with palette picker, code viewer, content variables
+- Sections focus on layout structure — colors come from the palette
 
 ### Kits tab
 - Browse kits filtered by category (Sections, Interactive, Navigation, Data)
@@ -55,7 +65,7 @@ Three tabs: **Templates**, **Kits**, and **Palettes**.
 - Search by name or tag
 - Click a palette to see: full color swatches, typography preview, CSS custom properties output
 
-## Three-Layer Architecture
+## Four-Layer Architecture
 
 ### Kits
 Self-contained components. Every kit must contain:
@@ -72,6 +82,16 @@ Self-contained components. Every kit must contain:
 - `variables` — customizable values with label, type (string, number, color), and default
 - `variants` — alternative configurations with CSS class names
 - `dependencies` — other kits this one requires
+
+### Sections
+Pre-built page sections focused on layout structure. Every section must contain:
+- `section.json` — metadata (name, slug, category, layout, default_palette, kits_used, variables)
+- `section.php` — WordPress template partial
+- `section.css` — styles using CSS custom properties for all colors/fonts
+- `preview.html` — self-contained preview
+- `README.md` — integration instructions
+
+Sections use CSS custom properties for colors (`var(--color-primary)`, etc.) so palettes can be swapped. Content variables (titles, subtitles, column counts) live in `section.json`. Color variables do NOT — those come from the palette.
 
 ### Palettes
 Color system + typography. Every palette must contain:
@@ -129,8 +149,9 @@ Plugins have a `buy_when` field: `day-1` (buy before first client) or `later` (b
 - All user input must be sanitized before saving (`sanitize_text_field`, etc.)
 
 ### Dashboard consistency
-- All new kits, templates, and palettes must be browsable in the dashboard
+- All new kits, sections, templates, and palettes must be browsable in the dashboard
 - Every kit needs a valid `kit.json` and working `preview.html`
+- Every section needs a valid `section.json`, `section.php`, `section.css`, and working `preview.html`
 - Every template needs a valid `template.json` and working `preview.html`
 - Every palette needs a valid `palette.json`
 

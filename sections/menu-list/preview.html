@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Menu List Preview</title>
+	<style>
+		/* Ember Hearth palette defaults */
+		:root {
+			--color-primary: #b42318;
+			--color-primary-dark: #8c1a11;
+			--color-secondary: #d4a017;
+			--color-dark: #1a1208;
+			--color-cream: #faf6f0;
+			--color-text: #2c2416;
+			--color-text-light: #6b5e4f;
+			--color-border: #e0d6c8;
+			--color-white: #ffffff;
+			--font-heading: Georgia, 'Times New Roman', serif;
+			--font-body: 'Inter', -apple-system, sans-serif;
+		}
+
+		/* Reset */
+		*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+		body {
+			background-color: var(--color-cream);
+			font-family: var(--font-body);
+			color: var(--color-text);
+		}
+
+		/* Photo placeholder */
+		.menu-list__photo-placeholder {
+			width: 100%;
+			height: 100%;
+			background-color: var(--color-border);
+			border-radius: 4px;
+		}
+	</style>
+	<link rel="stylesheet" href="section.css">
+</head>
+<body>
+
+<section class="menu-list" id="menu">
+	<div class="menu-list__header">
+		<h2 class="menu-list__title">Our Menu</h2>
+		<p class="menu-list__subtitle">Fresh ingredients, bold flavors</p>
+	</div>
+
+	<!-- Category: Appetizers -->
+	<div class="menu-list__category">
+		<h3 class="menu-list__category-heading">
+			Appetizers
+			<span class="menu-list__category-underline"></span>
+		</h3>
+
+		<div class="menu-list__item">
+			<div class="menu-list__photo">
+				<div class="menu-list__photo-placeholder"></div>
+			</div>
+			<div class="menu-list__item-content">
+				<div class="menu-list__item-row">
+					<span class="menu-list__item-name">Bruschetta Trio</span>
+					<span class="menu-list__item-leader"></span>
+					<span class="menu-list__item-price">$12.00</span>
+				</div>
+				<p class="menu-list__description">Toasted ciabatta topped with tomato basil, roasted pepper, and olive tapenade.</p>
+			</div>
+		</div>
+
+		<div class="menu-list__item">
+			<div class="menu-list__item-content">
+				<div class="menu-list__item-row">
+					<span class="menu-list__item-name">Crispy Calamari</span>
+					<span class="menu-list__item-leader"></span>
+					<span class="menu-list__item-price">$14.50</span>
+				</div>
+				<p class="menu-list__description">Lightly battered and fried, served with marinara and lemon aioli.</p>
+			</div>
+		</div>
+
+		<div class="menu-list__item">
+			<div class="menu-list__photo">
+				<div class="menu-list__photo-placeholder"></div>
+			</div>
+			<div class="menu-list__item-content">
+				<div class="menu-list__item-row">
+					<span class="menu-list__item-name">Soup of the Day</span>
+					<span class="menu-list__item-leader"></span>
+					<span class="menu-list__item-price">$8.00</span>
+				</div>
+				<p class="menu-list__description">Ask your server about today's seasonal selection.</p>
+			</div>
+		</div>
+
+		<div class="menu-list__item">
+			<div class="menu-list__item-content">
+				<div class="menu-list__item-row">
+					<span class="menu-list__item-name">Charcuterie Board</span>
+					<span class="menu-list__item-leader"></span>
+					<span class="menu-list__item-price">$18.00</span>
+				</div>
+				<p class="menu-list__description">Cured meats, aged cheeses, honeycomb, and grilled bread.</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Category: Entrees -->
+	<div class="menu-list__category">
+		<h3 class="menu-list__category-heading">
+			Entrees
+			<span class="menu-list__category-underline"></span>
+		</h3>
+
+		<div class="menu-list__item">
+			<div class="menu-list__photo">
+				<div class="menu-list__photo-placeholder"></div>
+			</div>
+			<div class="menu-list__item-content">
+				<div class="menu-list__item-row">
+					<span class="menu-list__item-name">Grilled Ribeye</span>
+					<span class="menu-list__item-leader"></span>
+					<span class="menu-list__item-price">$34.00</span>
+				</div>
+				<p class="menu-list__description">12oz bone-in ribeye with roasted garlic butter, seasonal vegetables, and mashed potatoes.</p>
+			</div>
+		</div>
+
+		<div class="menu-list__item">
+			<div class="menu-list__item-content">
+				<div class="menu-list__item-row">
+					<span class="menu-list__item-name">Pan-Seared Salmon</span>
+					<span class="menu-list__item-leader"></span>
+					<span class="menu-list__item-price">$28.00</span>
+				</div>
+				<p class="menu-list__description">Wild-caught salmon with citrus glaze, asparagus, and wild rice pilaf.</p>
+			</div>
+		</div>
+
+		<div class="menu-list__item">
+			<div class="menu-list__item-content">
+				<div class="menu-list__item-row">
+					<span class="menu-list__item-name">Mushroom Risotto</span>
+					<span class="menu-list__item-leader"></span>
+					<span class="menu-list__item-price">$22.00</span>
+				</div>
+				<p class="menu-list__description">Creamy arborio rice with wild mushrooms, parmesan, and truffle oil.</p>
+			</div>
+		</div>
+
+		<div class="menu-list__item">
+			<div class="menu-list__photo">
+				<div class="menu-list__photo-placeholder"></div>
+			</div>
+			<div class="menu-list__item-content">
+				<div class="menu-list__item-row">
+					<span class="menu-list__item-name">Braised Short Ribs</span>
+					<span class="menu-list__item-leader"></span>
+					<span class="menu-list__item-price">$30.00</span>
+				</div>
+				<p class="menu-list__description">Slow-braised beef short ribs in red wine reduction with creamy polenta.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+</body>
+</html>

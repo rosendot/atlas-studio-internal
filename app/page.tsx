@@ -40,6 +40,20 @@ export interface PaletteData {
   fonts: Record<string, PaletteFont>;
 }
 
+export interface SectionData {
+  name: string;
+  slug: string;
+  description: string;
+  category: string;
+  tags: string[];
+  layout: string;
+  default_palette: string;
+  kits_used: string[];
+  files: Record<string, string[]>;
+  variables: Record<string, KitVariable>;
+  fileContents: Record<string, string>;
+}
+
 export interface TemplateData {
   name: string;
   slug: string;
@@ -115,6 +129,45 @@ async function getPalettes(): Promise<PaletteData[]> {
   return palettes;
 }
 
+async function getSections(): Promise<SectionData[]> {
+  const sectionsDir = path.join(process.cwd(), "sections");
+  let folders: string[];
+  try {
+    folders = await fs.readdir(sectionsDir);
+  } catch {
+    return [];
+  }
+  const sections: SectionData[] = [];
+
+  for (const folder of folders) {
+    const sectionJsonPath = path.join(sectionsDir, folder, "section.json");
+    try {
+      const raw = await fs.readFile(sectionJsonPath, "utf-8");
+      const section = JSON.parse(raw) as SectionData;
+
+      const fileContents: Record<string, string> = {};
+      for (const [, files] of Object.entries(section.files)) {
+        for (const file of files) {
+          const filePath = path.join(sectionsDir, folder, file);
+          try {
+            const content = await fs.readFile(filePath, "utf-8");
+            fileContents[file] = content;
+          } catch {
+            fileContents[file] = "// File not found";
+          }
+        }
+      }
+      section.fileContents = fileContents;
+
+      sections.push(section);
+    } catch {
+      // skip folders without section.json
+    }
+  }
+
+  return sections;
+}
+
 async function getTemplates(): Promise<TemplateData[]> {
   const templatesDir = path.join(process.cwd(), "templates");
   let folders: string[];
@@ -157,11 +210,12 @@ async function getTemplates(): Promise<TemplateData[]> {
 export default async function Home() {
   const kits = await getKits();
   const palettes = await getPalettes();
+  const sections = await getSections();
   const templates = await getTemplates();
 
   return (
     <main className="min-h-screen">
-      <Dashboard kits={kits} palettes={palettes} templates={templates} />
+      <Dashboard kits={kits} palettes={palettes} sections={sections} templates={templates} />
     </main>
   );
 }
