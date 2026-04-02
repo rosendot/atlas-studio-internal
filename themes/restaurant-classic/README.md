@@ -8,19 +8,17 @@ This theme does NOT duplicate kit code. You must include these kits:
 
 | Kit | What It Provides |
 |-----|-----------------|
-| `kits/mobile-nav/` | Navbar CSS + hamburger toggle JS |
 | `kits/hero-section/` | Hero section CSS with overlay |
 | `kits/infinite-carousel/` | Carousel CSS + JS (track, arrows, dots, swipe) |
 | `kits/google-map-embed/` | Visit us map + info grid CSS |
-| `kits/custom-post-type/` | Reference for menu_item CPT (already in functions.php) |
 
 ## Setup for a Client Project
 
 1. Copy this theme folder into `web/app/themes/client-name/`
 2. Copy kit CSS files into the theme (or enqueue from a shared location):
-   - `mobile-nav.css`, `hero.css`, `carousel.css`, `map.css`
+   - `hero.css`, `carousel.css`, `map.css`
 3. Copy kit JS files into `assets/js/`:
-   - `mobile-nav.js`, `carousel.js`
+   - `carousel.js`
 4. Uncomment the `wp_enqueue_script` lines in `functions.php`
 5. Replace `<!-- PLACEHOLDER: ... -->` comments with client content
 6. Update CSS variables in `style.css` `:root` for client colors/fonts

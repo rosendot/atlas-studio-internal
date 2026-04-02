@@ -30,11 +30,9 @@ function my_theme_assets() {
 
     /*
      * JS from kits — copy into theme's assets/js/ during client setup:
-     *   - kits/mobile-nav/mobile-nav.js     → hamburger toggle
      *   - kits/infinite-carousel/carousel.js → carousel logic
      *
      * Then enqueue:
-     * wp_enqueue_script('mobile-nav', get_template_directory_uri() . '/assets/js/mobile-nav.js', [], '1.0.0', true);
      * wp_enqueue_script('carousel', get_template_directory_uri() . '/assets/js/carousel.js', [], '1.0.0', true);
      */
 }

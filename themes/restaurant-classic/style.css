@@ -4,7 +4,6 @@ Description: Warm traditional restaurant theme with placeholder content. Swap co
 Version: 1.0.0
 
 Kit Dependencies (load these CSS files alongside this stylesheet):
-  - kits/mobile-nav/mobile-nav.css         → Navbar + hamburger toggle
   - kits/hero-section/hero.css             → Hero section with overlay
   - kits/infinite-carousel/carousel.css    → Carousel track, arrows, dots
   - kits/google-map-embed/map.css          → Visit us map + info grid
@@ -215,18 +214,6 @@ img {
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
-}
-
-/* ========================================
-   Theme-Specific: Nav Brand Address
-   (extends mobile-nav kit)
-   ======================================== */
-.nav-brand__address {
-    font-family: var(--font-heading);
-    font-size: 0.75rem;
-    color: var(--color-secondary);
-    opacity: 0.6;
-    letter-spacing: 0.5px;
 }
 
 /* ========================================

@@ -30,10 +30,8 @@ Two tabs: **Themes** and **Kits**.
 | Kit | Category | What It Does |
 |-----|----------|-------------|
 | `infinite-carousel/` | Interactive | Infinite-loop carousel with arrows, dots, and touch swipe |
-| `mobile-nav/` | Navigation | Responsive hamburger menu toggle |
 | `hero-section/` | Section | Full-width hero with dark overlay, text, and CTA buttons |
 | `google-map-embed/` | Section | Google Maps iframe embed with contact info grid |
-| `custom-post-type/` | Data | CPT registration + taxonomy + meta box with nonces |
 
 ## Themes
 
