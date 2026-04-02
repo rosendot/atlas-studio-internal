@@ -1,0 +1,50 @@
+{
+  "name": "FAQ Accordion",
+  "slug": "faq-accordion",
+  "description": "Expandable Q&A accordion with smooth animations, accessible keyboard navigation, and one-at-a-time or multi-open modes.",
+  "category": "interactive",
+  "tags": ["faq", "accordion", "questions", "answers", "expandable", "toggle"],
+  "files": {
+    "css": ["faq-accordion.css"],
+    "js": ["faq-accordion.js"],
+    "php": ["faq-accordion.php"]
+  },
+  "variables": {
+    "borderColor": {
+      "label": "Border color",
+      "type": "color",
+      "default": "#e0d6c8"
+    },
+    "iconColor": {
+      "label": "Icon color",
+      "type": "color",
+      "default": "#b42318"
+    },
+    "questionColor": {
+      "label": "Question text color",
+      "type": "color",
+      "default": "#1a1208"
+    },
+    "answerColor": {
+      "label": "Answer text color",
+      "type": "color",
+      "default": "#6b5e4f"
+    },
+    "transitionSpeed": {
+      "label": "Transition speed",
+      "type": "string",
+      "default": "0.3s"
+    }
+  },
+  "variants": {
+    "default": {
+      "label": "One at a time",
+      "class": "faq-accordion"
+    },
+    "multi": {
+      "label": "Multiple open",
+      "class": "faq-accordion faq-accordion--multi"
+    }
+  },
+  "dependencies": []
+}

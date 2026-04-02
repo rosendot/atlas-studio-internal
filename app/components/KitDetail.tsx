@@ -5,12 +5,14 @@ import type { KitData } from "../page";
 import HeroSection from "./kit-previews/HeroSection";
 import InfiniteCarousel from "./kit-previews/InfiniteCarousel";
 import GoogleMapEmbed from "./kit-previews/GoogleMapEmbed";
+import FaqAccordion from "./kit-previews/FaqAccordion";
 
 // Registry of kit slugs → React preview components
 const KIT_PREVIEWS: Record<string, ComponentType<Record<string, string | number>>> = {
   "hero-section": HeroSection,
   "infinite-carousel": InfiniteCarousel,
   "google-map-embed": GoogleMapEmbed,
+  "faq-accordion": FaqAccordion,
 };
 
 const LANG_COLORS: Record<string, string> = {

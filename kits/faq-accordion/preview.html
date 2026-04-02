@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Accordion Preview</title>
+    <link rel="stylesheet" href="faq-accordion.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #faf6f0;
+            padding: 4rem 2rem;
+        }
+        h2 {
+            text-align: center;
+            font-family: Georgia, serif;
+            font-size: 2.5rem;
+            color: #1a1208;
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            text-align: center;
+            color: #6b5e4f;
+            margin-bottom: 3rem;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Frequently Asked Questions</h2>
+    <p class="subtitle">Everything you need to know before your visit</p>
+
+    <div class="faq-accordion">
+        <div class="faq-accordion__item">
+            <button class="faq-accordion__question" aria-expanded="false" aria-controls="faq-0">
+                What are your hours?
+                <span class="faq-accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-accordion__answer" id="faq-0" role="region">
+                <div class="faq-accordion__answer-inner">
+                    We are open Monday through Friday from 11am to 10pm, and Saturday through Sunday from 10am to 11pm. We are closed on major holidays.
+                </div>
+            </div>
+        </div>
+        <div class="faq-accordion__item">
+            <button class="faq-accordion__question" aria-expanded="false" aria-controls="faq-1">
+                Do you take reservations?
+                <span class="faq-accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-accordion__answer" id="faq-1" role="region">
+                <div class="faq-accordion__answer-inner">
+                    Yes! You can call us directly or book online through our website. Walk-ins are always welcome, but we recommend reservations for parties of 6 or more.
+                </div>
+            </div>
+        </div>
+        <div class="faq-accordion__item">
+            <button class="faq-accordion__question" aria-expanded="false" aria-controls="faq-2">
+                Do you offer catering?
+                <span class="faq-accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-accordion__answer" id="faq-2" role="region">
+                <div class="faq-accordion__answer-inner">
+                    We offer catering for events of all sizes — from office lunches to weddings. Contact us for a custom menu and pricing. We typically need at least one week's notice for large orders.
+                </div>
+            </div>
+        </div>
+        <div class="faq-accordion__item">
+            <button class="faq-accordion__question" aria-expanded="false" aria-controls="faq-3">
+                Is there parking available?
+                <span class="faq-accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-accordion__answer" id="faq-3" role="region">
+                <div class="faq-accordion__answer-inner">
+                    Yes, we have a free parking lot behind the building with 30 spaces available. Street parking is also available on Main Street and Oak Avenue.
+                </div>
+            </div>
+        </div>
+        <div class="faq-accordion__item">
+            <button class="faq-accordion__question" aria-expanded="false" aria-controls="faq-4">
+                Do you accommodate dietary restrictions?
+                <span class="faq-accordion__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-accordion__answer" id="faq-4" role="region">
+                <div class="faq-accordion__answer-inner">
+                    Absolutely. We offer vegetarian, vegan, and gluten-free options on our menu. Please let your server know about any allergies and we will do our best to accommodate you.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="faq-accordion.js"></script>
+</body>
+</html>
