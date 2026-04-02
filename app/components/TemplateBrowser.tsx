@@ -154,10 +154,13 @@ export default function TemplateBrowser({
           {filtered.map((template) => {
             const palette = palettes.find((p) => p.slug === template.default_palette);
             return (
-              <button
+              <div
                 key={template.slug}
                 onClick={() => setSelectedTemplate(template)}
-                className="bg-[var(--card-bg)] border border-[var(--card-border)] rounded-xl overflow-hidden text-left hover:border-[var(--accent)] transition-all hover:shadow-lg hover:shadow-[var(--accent)]/5 group"
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") setSelectedTemplate(template); }}
+                className="bg-[var(--card-bg)] border border-[var(--card-border)] rounded-xl overflow-hidden text-left hover:border-[var(--accent)] transition-all hover:shadow-lg hover:shadow-[var(--accent)]/5 group cursor-pointer"
               >
                 <TemplateThumbnail template={template} palette={palette} />
 
@@ -205,7 +208,7 @@ export default function TemplateBrowser({
                     )}
                   </div>
                 </div>
-              </button>
+              </div>
             );
           })}
         </div>
