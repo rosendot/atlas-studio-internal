@@ -37,10 +37,14 @@ Four tabs: **Templates**, **Sections**, **Kits**, and **Palettes**.
 | `hero-section/` | Section | Full-width hero with dark overlay, text, and CTA buttons |
 | `google-map-embed/` | Section | Google Maps iframe embed with contact info grid |
 | `faq-accordion/` | Interactive | Expandable Q&A accordion with smooth animations |
+| `faq-two-column/` | Interactive | Two-column FAQ — questions left, answer panel right |
+| `faq-cards/` | Section | Q&A card grid with icon badges |
+| `faq-tabbed/` | Interactive | Tabbed FAQ with category tabs and accordion |
 | `mega-menu/` | Navigation | Full-width hover dropdown with multi-column panels |
 | `menu-list/` | Section | Vertical menu list with dotted leaders, grouped by category |
 | `menu-grid/` | Section | Responsive menu card grid with category filter tabs |
 | `menu-cards/` | Section | Large editorial menu cards with photo overlays |
+| `grid-gallery/` | Section | Configurable photo grid with hover zoom overlay |
 
 ## Sections
 

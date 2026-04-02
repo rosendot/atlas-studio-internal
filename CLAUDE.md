@@ -21,10 +21,14 @@ wp-agency-vault/
 │   ├── hero-section/        # Full-width hero with overlay
 │   ├── google-map-embed/    # Maps iframe + contact info grid
 │   ├── faq-accordion/       # Expandable Q&A with animations
+│   ├── faq-two-column/      # Two-column FAQ (questions left, answer right)
+│   ├── faq-cards/           # Q&A card grid
+│   ├── faq-tabbed/          # Tabbed FAQ with category tabs + accordion
 │   ├── mega-menu/           # Full-width hover dropdown navigation
 │   ├── menu-list/           # Vertical menu list with dotted leaders
 │   ├── menu-grid/           # Responsive menu card grid with filter tabs
-│   └── menu-cards/          # Large editorial menu cards with overlays
+│   ├── menu-cards/          # Large editorial menu cards with overlays
+│   └── grid-gallery/        # Configurable photo grid with hover overlay
 ├── palettes/                # Color systems + typography (mix and match with anything)
 │   └── ember-hearth/        # Rich reds, warm golds, serif headings
 ├── sections/                # Full page-level compositions of kits + palette (e.g., a complete menu page)
@@ -74,14 +78,35 @@ Self-contained components. Every kit must contain:
 - `kit.json` — metadata powering the dashboard UI
 - `preview.html` — self-contained HTML preview (references kit's own CSS/JS)
 
+Every kit also needs a **TSX preview component** in `app/components/kit-previews/`:
+- React component that renders the kit for the dashboard
+- Must be registered in the `KIT_PREVIEWS` registry in `KitDetail.tsx`
+- Uses `var(--token)` CSS custom properties from `shared.ts` for ALL visual values (colors, fonts, sizes, spacing, radii, shadows)
+- Must follow the standard section header pattern: same h2 + subtitle styling, same padding
+- Kit-specific props only (content/behavior) — no color/font/size props
+
 `kit.json` schema:
 - `name`, `slug`, `description` — identity
 - `category` — one of: section, interactive, navigation, data
 - `tags` — searchable keywords
 - `files` — grouped by language (`js`, `css`, `php`)
-- `variables` — customizable values with label, type (string, number, color), and default
+- `variables` — customizable values with label, type (string, number), and default
 - `variants` — alternative configurations with CSS class names
 - `dependencies` — other kits this one requires
+
+### Design Token System
+All kit preview components share a design token system defined in `app/components/kit-previews/shared.ts`. KitDetail.tsx sets these as CSS custom properties on the preview wrapper. Tokens cover:
+- **Colors**: `--color-primary`, `--color-dark`, `--color-cream`, `--color-text`, `--color-text-light`, `--color-border`, `--color-white`, etc.
+- **Fonts**: `--font-heading`, `--font-body`
+- **Font sizes**: `--text-xs` through `--text-5xl`
+- **Spacing**: `--space-1` through `--space-16`
+- **Radii**: `--radius-sm` through `--radius-full`
+- **Shadows**: `--shadow-sm`, `--shadow-md`, `--shadow-lg`
+- **Max widths**: `--max-w-sm` through `--max-w-2xl`
+- **Line heights**: `--leading-tight` through `--leading-loose`
+- **Letter spacing**: `--tracking-tight`, `--tracking-normal`, `--tracking-wide`
+
+Kit components must use `var(--token-name)` for every visual value. No hardcoded rem, px, hex, or font strings.
 
 ### Sections
 Full page-level compositions that wire multiple kits together into a complete page view. A section is NOT a single component — it's how an entire page tab is laid out.

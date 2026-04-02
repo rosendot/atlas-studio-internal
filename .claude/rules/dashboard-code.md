@@ -36,6 +36,15 @@ Next.js + TypeScript + Tailwind conventions for the vault dashboard UI.
 - File contents are read and passed as `fileContents` prop — no client-side file reads
 - Search and filtering happen client-side in Browser components
 
+## Kit Preview Components
+- Kit previews live in `app/components/kit-previews/` — one TSX file per kit
+- Design tokens defined in `app/components/kit-previews/shared.ts` — single source of truth for all visual values
+- `KitDetail.tsx` sets tokens as CSS custom properties on the preview wrapper via `designTokens` import
+- Kit components use `var(--token-name)` for ALL visual values — no hardcoded colors, fonts, sizes, spacing, or radii
+- Kit component props are content/behavior only — no palette/style props
+- Every kit must follow the standard header pattern: same h2 style, same subtitle style, same padding
+- Register new kit previews in the `KIT_PREVIEWS` registry in `KitDetail.tsx`
+
 ## Adding New Entities
 When adding a new browsable entity type (beyond kits, sections, templates, and palettes):
 1. Add the TypeScript interface in `page.tsx`
