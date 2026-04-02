@@ -1,0 +1,21 @@
+{
+  "name": "Moody Charcoal",
+  "slug": "moody-charcoal",
+  "description": "Dark and dramatic. Charcoal backgrounds, soft amber highlights, muted tones. Perfect for bars, lounges, barbershops, or upscale nightlife.",
+  "tags": ["dark", "moody", "dramatic", "charcoal", "amber", "nightlife", "upscale", "bar"],
+  "colors": {
+    "primary": { "label": "Primary", "value": "#d4a373" },
+    "primary_dark": { "label": "Primary Dark", "value": "#b8864f" },
+    "secondary": { "label": "Secondary / Accent", "value": "#e9c46a" },
+    "dark": { "label": "Dark Background", "value": "#212121" },
+    "cream": { "label": "Light Background", "value": "#f5f0eb" },
+    "text": { "label": "Body Text", "value": "#e0d6cc" },
+    "text_light": { "label": "Muted Text", "value": "#9a918a" },
+    "border": { "label": "Border", "value": "#3a3a3a" },
+    "white": { "label": "White", "value": "#f5f0eb" }
+  },
+  "fonts": {
+    "heading": { "label": "Heading Font", "value": "'Cormorant Garamond', Georgia, serif" },
+    "body": { "label": "Body Font", "value": "'Raleway', -apple-system, sans-serif" }
+  }
+}

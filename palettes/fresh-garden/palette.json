@@ -1,0 +1,21 @@
+{
+  "name": "Fresh Garden",
+  "slug": "fresh-garden",
+  "description": "Natural and inviting. Forest greens, warm earth tones, soft cream backgrounds. Great for organic, farm-to-table, or wellness brands.",
+  "tags": ["fresh", "natural", "green", "organic", "earthy", "wellness", "farm-to-table"],
+  "colors": {
+    "primary": { "label": "Primary", "value": "#386641" },
+    "primary_dark": { "label": "Primary Dark", "value": "#2b4f33" },
+    "secondary": { "label": "Secondary / Accent", "value": "#bc6c25" },
+    "dark": { "label": "Dark Background", "value": "#283618" },
+    "cream": { "label": "Light Background", "value": "#fefae0" },
+    "text": { "label": "Body Text", "value": "#283618" },
+    "text_light": { "label": "Muted Text", "value": "#6b705c" },
+    "border": { "label": "Border", "value": "#dde0cd" },
+    "white": { "label": "White", "value": "#ffffff" }
+  },
+  "fonts": {
+    "heading": { "label": "Heading Font", "value": "'Playfair Display', Georgia, serif" },
+    "body": { "label": "Body Font", "value": "'Lato', -apple-system, sans-serif" }
+  }
+}

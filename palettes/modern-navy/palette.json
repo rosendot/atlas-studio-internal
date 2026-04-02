@@ -1,0 +1,21 @@
+{
+  "name": "Modern Navy",
+  "slug": "modern-navy",
+  "description": "Clean and professional. Deep navy backgrounds, crisp white text, bright coral accents. Sans-serif throughout.",
+  "tags": ["modern", "clean", "professional", "navy", "coral", "sans-serif", "corporate"],
+  "colors": {
+    "primary": { "label": "Primary", "value": "#e63946" },
+    "primary_dark": { "label": "Primary Dark", "value": "#c1121f" },
+    "secondary": { "label": "Secondary / Accent", "value": "#457b9d" },
+    "dark": { "label": "Dark Background", "value": "#1d3557" },
+    "cream": { "label": "Light Background", "value": "#f1faee" },
+    "text": { "label": "Body Text", "value": "#1d3557" },
+    "text_light": { "label": "Muted Text", "value": "#6b7f99" },
+    "border": { "label": "Border", "value": "#d1dce6" },
+    "white": { "label": "White", "value": "#ffffff" }
+  },
+  "fonts": {
+    "heading": { "label": "Heading Font", "value": "'Poppins', 'Segoe UI', sans-serif" },
+    "body": { "label": "Body Font", "value": "'Inter', -apple-system, sans-serif" }
+  }
+}

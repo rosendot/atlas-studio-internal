@@ -1,0 +1,21 @@
+{
+  "name": "Luxe Gold",
+  "slug": "luxe-gold",
+  "description": "Elegant and high-end. Black backgrounds, rich gold accents, subtle cream highlights. Built for jewelry stores, fine dining, luxury salons, or premium services.",
+  "tags": ["luxury", "elegant", "gold", "black", "premium", "fine-dining", "jewelry", "upscale"],
+  "colors": {
+    "primary": { "label": "Primary", "value": "#c9a84c" },
+    "primary_dark": { "label": "Primary Dark", "value": "#a68a3e" },
+    "secondary": { "label": "Secondary / Accent", "value": "#d4af37" },
+    "dark": { "label": "Dark Background", "value": "#0a0a0a" },
+    "cream": { "label": "Light Background", "value": "#faf8f3" },
+    "text": { "label": "Body Text", "value": "#1a1a1a" },
+    "text_light": { "label": "Muted Text", "value": "#7a7a7a" },
+    "border": { "label": "Border", "value": "#2a2a2a" },
+    "white": { "label": "White", "value": "#ffffff" }
+  },
+  "fonts": {
+    "heading": { "label": "Heading Font", "value": "'Cinzel', Georgia, serif" },
+    "body": { "label": "Body Font", "value": "'Montserrat', -apple-system, sans-serif" }
+  }
+}
