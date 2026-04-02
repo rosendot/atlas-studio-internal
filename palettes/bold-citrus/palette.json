@@ -1,0 +1,21 @@
+{
+  "name": "Bold Citrus",
+  "slug": "bold-citrus",
+  "description": "Energetic and playful. Bright orange, lime green pops, warm yellow highlights. Perfect for taco shops, juice bars, food trucks, or youth-oriented brands.",
+  "tags": ["bold", "bright", "citrus", "orange", "playful", "energetic", "food-truck", "taco"],
+  "colors": {
+    "primary": { "label": "Primary", "value": "#e36414" },
+    "primary_dark": { "label": "Primary Dark", "value": "#c45010" },
+    "secondary": { "label": "Secondary / Accent", "value": "#8cb369" },
+    "dark": { "label": "Dark Background", "value": "#1a1a2e" },
+    "cream": { "label": "Light Background", "value": "#fffbf0" },
+    "text": { "label": "Body Text", "value": "#2b2d42" },
+    "text_light": { "label": "Muted Text", "value": "#6c6f85" },
+    "border": { "label": "Border", "value": "#e0ddd5" },
+    "white": { "label": "White", "value": "#ffffff" }
+  },
+  "fonts": {
+    "heading": { "label": "Heading Font", "value": "'Fredoka', 'Comic Sans MS', sans-serif" },
+    "body": { "label": "Body Font", "value": "'Rubik', -apple-system, sans-serif" }
+  }
+}

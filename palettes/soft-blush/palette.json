@@ -1,0 +1,21 @@
+{
+  "name": "Soft Blush",
+  "slug": "soft-blush",
+  "description": "Feminine and soft. Dusty pinks, rose gold accents, light neutral backgrounds. Ideal for salons, bakeries, florists, or boutique shops.",
+  "tags": ["soft", "feminine", "blush", "pink", "rose-gold", "salon", "bakery", "boutique"],
+  "colors": {
+    "primary": { "label": "Primary", "value": "#c1666b" },
+    "primary_dark": { "label": "Primary Dark", "value": "#a34e53" },
+    "secondary": { "label": "Secondary / Accent", "value": "#d4a276" },
+    "dark": { "label": "Dark Background", "value": "#3c2a2e" },
+    "cream": { "label": "Light Background", "value": "#fdf6f0" },
+    "text": { "label": "Body Text", "value": "#3c2a2e" },
+    "text_light": { "label": "Muted Text", "value": "#917b7e" },
+    "border": { "label": "Border", "value": "#e8d5cf" },
+    "white": { "label": "White", "value": "#ffffff" }
+  },
+  "fonts": {
+    "heading": { "label": "Heading Font", "value": "'Libre Baskerville', Georgia, serif" },
+    "body": { "label": "Body Font", "value": "'Nunito Sans', -apple-system, sans-serif" }
+  }
+}

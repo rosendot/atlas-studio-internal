@@ -1,0 +1,21 @@
+{
+  "name": "Terra Clay",
+  "slug": "terra-clay",
+  "description": "Desert-inspired warmth. Terracotta, sage green, sand tones. Ideal for southwestern restaurants, pottery studios, landscaping, or artisan shops.",
+  "tags": ["desert", "terracotta", "sage", "southwestern", "earthy", "artisan", "warm", "clay"],
+  "colors": {
+    "primary": { "label": "Primary", "value": "#c2714f" },
+    "primary_dark": { "label": "Primary Dark", "value": "#a45c3e" },
+    "secondary": { "label": "Secondary / Accent", "value": "#87986a" },
+    "dark": { "label": "Dark Background", "value": "#2f2418" },
+    "cream": { "label": "Light Background", "value": "#f7f2ec" },
+    "text": { "label": "Body Text", "value": "#3b3022" },
+    "text_light": { "label": "Muted Text", "value": "#8a7d6b" },
+    "border": { "label": "Border", "value": "#ddd2c4" },
+    "white": { "label": "White", "value": "#ffffff" }
+  },
+  "fonts": {
+    "heading": { "label": "Heading Font", "value": "'Josefin Slab', Georgia, serif" },
+    "body": { "label": "Body Font", "value": "'Work Sans', -apple-system, sans-serif" }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Nordic Frost",
+  "slug": "nordic-frost",
+  "description": "Minimal and cool. Slate grays, ice blue accents, generous white space. Built for clinics, dental offices, tech services, or Scandinavian-inspired brands.",
+  "tags": ["minimal", "cool", "nordic", "gray", "ice-blue", "clean", "clinic", "tech"],
+  "colors": {
+    "primary": { "label": "Primary", "value": "#4a90a4" },
+    "primary_dark": { "label": "Primary Dark", "value": "#37758a" },
+    "secondary": { "label": "Secondary / Accent", "value": "#90be6d" },
+    "dark": { "label": "Dark Background", "value": "#2b2d42" },
+    "cream": { "label": "Light Background", "value": "#f8f9fa" },
+    "text": { "label": "Body Text", "value": "#2b2d42" },
+    "text_light": { "label": "Muted Text", "value": "#8d99ae" },
+    "border": { "label": "Border", "value": "#dee2e6" },
+    "white": { "label": "White", "value": "#ffffff" }
+  },
+  "fonts": {
+    "heading": { "label": "Heading Font", "value": "'DM Sans', 'Segoe UI', sans-serif" },
+    "body": { "label": "Body Font", "value": "'Inter', -apple-system, sans-serif" }
+  }
+}
