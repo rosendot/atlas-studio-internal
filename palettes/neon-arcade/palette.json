@@ -1,0 +1,21 @@
+{
+  "name": "Neon Arcade",
+  "slug": "neon-arcade",
+  "description": "Cyberpunk neons on dark backgrounds. Hot pink, electric cyan, deep black. For gaming cafes, escape rooms, VR experiences, or tech startups.",
+  "tags": ["neon", "cyberpunk", "pink", "cyan", "gaming", "tech", "arcade", "dark"],
+  "colors": {
+    "primary": { "label": "Primary", "value": "#ec4899" },
+    "primary_dark": { "label": "Primary Dark", "value": "#be185d" },
+    "secondary": { "label": "Secondary / Accent", "value": "#06b6d4" },
+    "dark": { "label": "Dark Background", "value": "#09090b" },
+    "cream": { "label": "Light Background", "value": "#f0f0f5" },
+    "text": { "label": "Body Text", "value": "#e4e4e7" },
+    "text_light": { "label": "Muted Text", "value": "#a1a1aa" },
+    "border": { "label": "Border", "value": "#27272a" },
+    "white": { "label": "White", "value": "#fafafa" }
+  },
+  "fonts": {
+    "heading": { "label": "Heading Font", "value": "'Poppins', 'Segoe UI', sans-serif" },
+    "body": { "label": "Body Font", "value": "'Rubik', -apple-system, sans-serif" }
+  }
+}

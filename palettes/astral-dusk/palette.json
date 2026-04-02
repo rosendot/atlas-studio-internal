@@ -1,0 +1,21 @@
+{
+  "name": "Astral Dusk",
+  "slug": "astral-dusk",
+  "description": "Twilight indigo fading into warm peach. Dreamy and atmospheric. For sunset restaurants, rooftop bars, photography studios, or wellness retreats.",
+  "tags": ["indigo", "peach", "twilight", "dreamy", "rooftop", "sunset", "photography", "retreat"],
+  "colors": {
+    "primary": { "label": "Primary", "value": "#4f46e5" },
+    "primary_dark": { "label": "Primary Dark", "value": "#4338ca" },
+    "secondary": { "label": "Secondary / Accent", "value": "#fb923c" },
+    "dark": { "label": "Dark Background", "value": "#1a1638" },
+    "cream": { "label": "Light Background", "value": "#fef7f0" },
+    "text": { "label": "Body Text", "value": "#1e1b4b" },
+    "text_light": { "label": "Muted Text", "value": "#7874a5" },
+    "border": { "label": "Border", "value": "#d6d3f0" },
+    "white": { "label": "White", "value": "#ffffff" }
+  },
+  "fonts": {
+    "heading": { "label": "Heading Font", "value": "'Lora', Georgia, serif" },
+    "body": { "label": "Body Font", "value": "'Nunito Sans', -apple-system, sans-serif" }
+  }
+}

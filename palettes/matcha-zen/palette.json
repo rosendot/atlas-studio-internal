@@ -1,0 +1,21 @@
+{
+  "name": "Matcha Zen",
+  "slug": "matcha-zen",
+  "description": "Soft sage and matcha greens, warm off-whites, calming neutrals. For tea shops, yoga studios, meditation centers, or plant shops.",
+  "tags": ["zen", "matcha", "sage", "calm", "yoga", "tea", "wellness", "peaceful"],
+  "colors": {
+    "primary": { "label": "Primary", "value": "#6b8f71" },
+    "primary_dark": { "label": "Primary Dark", "value": "#4a7050" },
+    "secondary": { "label": "Secondary / Accent", "value": "#c4a35a" },
+    "dark": { "label": "Dark Background", "value": "#2c3329" },
+    "cream": { "label": "Light Background", "value": "#f6f4ef" },
+    "text": { "label": "Body Text", "value": "#2c3329" },
+    "text_light": { "label": "Muted Text", "value": "#7d8578" },
+    "border": { "label": "Border", "value": "#ddd9d0" },
+    "white": { "label": "White", "value": "#ffffff" }
+  },
+  "fonts": {
+    "heading": { "label": "Heading Font", "value": "'Lora', Georgia, serif" },
+    "body": { "label": "Body Font", "value": "'Nunito Sans', -apple-system, sans-serif" }
+  }
+}

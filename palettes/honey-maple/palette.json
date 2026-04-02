@@ -1,0 +1,21 @@
+{
+  "name": "Honey Maple",
+  "slug": "honey-maple",
+  "description": "Warm honey yellows, maple brown, buttery cream. For bakeries, breakfast spots, coffee shops, or country kitchens.",
+  "tags": ["honey", "maple", "yellow", "bakery", "breakfast", "coffee", "country", "cozy"],
+  "colors": {
+    "primary": { "label": "Primary", "value": "#b45309" },
+    "primary_dark": { "label": "Primary Dark", "value": "#854d0e" },
+    "secondary": { "label": "Secondary / Accent", "value": "#d97706" },
+    "dark": { "label": "Dark Background", "value": "#292211" },
+    "cream": { "label": "Light Background", "value": "#fefce8" },
+    "text": { "label": "Body Text", "value": "#422006" },
+    "text_light": { "label": "Muted Text", "value": "#78716c" },
+    "border": { "label": "Border", "value": "#e7e0c8" },
+    "white": { "label": "White", "value": "#ffffff" }
+  },
+  "fonts": {
+    "heading": { "label": "Heading Font", "value": "'Merriweather', Georgia, serif" },
+    "body": { "label": "Body Font", "value": "'Open Sans', -apple-system, sans-serif" }
+  }
+}

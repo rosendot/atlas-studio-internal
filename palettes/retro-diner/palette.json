@@ -1,0 +1,21 @@
+{
+  "name": "Retro Diner",
+  "slug": "retro-diner",
+  "description": "1950s Americana. Cherry red, checkerboard black, chrome silver, milkshake pink. For diners, burger joints, retro barbershops, or vintage shops.",
+  "tags": ["retro", "1950s", "diner", "cherry", "vintage", "americana", "chrome", "burger"],
+  "colors": {
+    "primary": { "label": "Primary", "value": "#dc2626" },
+    "primary_dark": { "label": "Primary Dark", "value": "#b91c1c" },
+    "secondary": { "label": "Secondary / Accent", "value": "#fbbf24" },
+    "dark": { "label": "Dark Background", "value": "#18181b" },
+    "cream": { "label": "Light Background", "value": "#fef9ef" },
+    "text": { "label": "Body Text", "value": "#18181b" },
+    "text_light": { "label": "Muted Text", "value": "#71717a" },
+    "border": { "label": "Border", "value": "#d4d4d8" },
+    "white": { "label": "White", "value": "#ffffff" }
+  },
+  "fonts": {
+    "heading": { "label": "Heading Font", "value": "'Fredoka', 'Comic Sans MS', sans-serif" },
+    "body": { "label": "Body Font", "value": "'Poppins', 'Segoe UI', sans-serif" }
+  }
+}

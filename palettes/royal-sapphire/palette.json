@@ -1,0 +1,21 @@
+{
+  "name": "Royal Sapphire",
+  "slug": "royal-sapphire",
+  "description": "Bold royal blue with warm gold accents on clean white. For law offices, financial advisors, real estate agencies, or established brands.",
+  "tags": ["royal", "blue", "sapphire", "gold", "professional", "law", "finance", "real-estate"],
+  "colors": {
+    "primary": { "label": "Primary", "value": "#2563eb" },
+    "primary_dark": { "label": "Primary Dark", "value": "#1d4ed8" },
+    "secondary": { "label": "Secondary / Accent", "value": "#ca8a04" },
+    "dark": { "label": "Dark Background", "value": "#0f172a" },
+    "cream": { "label": "Light Background", "value": "#f8fafc" },
+    "text": { "label": "Body Text", "value": "#0f172a" },
+    "text_light": { "label": "Muted Text", "value": "#64748b" },
+    "border": { "label": "Border", "value": "#cbd5e1" },
+    "white": { "label": "White", "value": "#ffffff" }
+  },
+  "fonts": {
+    "heading": { "label": "Heading Font", "value": "'Merriweather', Georgia, serif" },
+    "body": { "label": "Body Font", "value": "'Source Sans 3', -apple-system, sans-serif" }
+  }
+}

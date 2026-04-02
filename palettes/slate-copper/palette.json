@@ -1,0 +1,21 @@
+{
+  "name": "Slate & Copper",
+  "slug": "slate-copper",
+  "description": "Cool slate grays with warm copper accents. Masculine and refined. For whiskey bars, cigar lounges, leather goods, or men's grooming.",
+  "tags": ["slate", "copper", "masculine", "refined", "whiskey", "cigar", "grooming", "leather"],
+  "colors": {
+    "primary": { "label": "Primary", "value": "#c27439" },
+    "primary_dark": { "label": "Primary Dark", "value": "#a35e2a" },
+    "secondary": { "label": "Secondary / Accent", "value": "#94a3b8" },
+    "dark": { "label": "Dark Background", "value": "#1e293b" },
+    "cream": { "label": "Light Background", "value": "#f8fafc" },
+    "text": { "label": "Body Text", "value": "#1e293b" },
+    "text_light": { "label": "Muted Text", "value": "#64748b" },
+    "border": { "label": "Border", "value": "#cbd5e1" },
+    "white": { "label": "White", "value": "#ffffff" }
+  },
+  "fonts": {
+    "heading": { "label": "Heading Font", "value": "'Roboto Slab', Georgia, serif" },
+    "body": { "label": "Body Font", "value": "'Source Sans 3', -apple-system, sans-serif" }
+  }
+}

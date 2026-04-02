@@ -1,0 +1,21 @@
+{
+  "name": "Concrete Steel",
+  "slug": "concrete-steel",
+  "description": "Raw industrial. Concrete grays, steel blue highlights, brutalist feel. For auto shops, gyms, construction, or urban brands.",
+  "tags": ["industrial", "gray", "steel", "brutalist", "gym", "auto", "construction", "urban"],
+  "colors": {
+    "primary": { "label": "Primary", "value": "#475569" },
+    "primary_dark": { "label": "Primary Dark", "value": "#334155" },
+    "secondary": { "label": "Secondary / Accent", "value": "#f97316" },
+    "dark": { "label": "Dark Background", "value": "#1e1e1e" },
+    "cream": { "label": "Light Background", "value": "#f1f1f1" },
+    "text": { "label": "Body Text", "value": "#1e1e1e" },
+    "text_light": { "label": "Muted Text", "value": "#737373" },
+    "border": { "label": "Border", "value": "#d4d4d4" },
+    "white": { "label": "White", "value": "#ffffff" }
+  },
+  "fonts": {
+    "heading": { "label": "Heading Font", "value": "'Oswald', 'Arial Narrow', sans-serif" },
+    "body": { "label": "Body Font", "value": "'Work Sans', -apple-system, sans-serif" }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Citron Pulse",
+  "slug": "citron-pulse",
+  "description": "Chartreuse yellow-green with deep forest contrast. Fresh and alive. For farmers markets, juice bars, garden centers, or health food stores.",
+  "tags": ["chartreuse", "citron", "yellow-green", "fresh", "alive", "farmers-market", "juice", "garden"],
+  "colors": {
+    "primary": { "label": "Primary", "value": "#a3e635" },
+    "primary_dark": { "label": "Primary Dark", "value": "#84cc16" },
+    "secondary": { "label": "Secondary / Accent", "value": "#f97316" },
+    "dark": { "label": "Dark Background", "value": "#14200a" },
+    "cream": { "label": "Light Background", "value": "#fbfee8" },
+    "text": { "label": "Body Text", "value": "#1c2b0a" },
+    "text_light": { "label": "Muted Text", "value": "#5c7040" },
+    "border": { "label": "Border", "value": "#d8e8a8" },
+    "white": { "label": "White", "value": "#ffffff" }
+  },
+  "fonts": {
+    "heading": { "label": "Heading Font", "value": "'Poppins', 'Segoe UI', sans-serif" },
+    "body": { "label": "Body Font", "value": "'Open Sans', -apple-system, sans-serif" }
+  }
+}

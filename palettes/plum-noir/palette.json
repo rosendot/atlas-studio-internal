@@ -1,0 +1,21 @@
+{
+  "name": "Plum Noir",
+  "slug": "plum-noir",
+  "description": "Dark plum with warm cream and copper touches. Brooding and sophisticated. For speakeasies, tattoo parlors, vintage furniture, or dark chocolate brands.",
+  "tags": ["plum", "wine", "noir", "dark", "sophisticated", "speakeasy", "tattoo", "vintage"],
+  "colors": {
+    "primary": { "label": "Primary", "value": "#9f1239" },
+    "primary_dark": { "label": "Primary Dark", "value": "#881337" },
+    "secondary": { "label": "Secondary / Accent", "value": "#c27439" },
+    "dark": { "label": "Dark Background", "value": "#160a12" },
+    "cream": { "label": "Light Background", "value": "#faf5f2" },
+    "text": { "label": "Body Text", "value": "#2e1520" },
+    "text_light": { "label": "Muted Text", "value": "#876872" },
+    "border": { "label": "Border", "value": "#dfc8cc" },
+    "white": { "label": "White", "value": "#ffffff" }
+  },
+  "fonts": {
+    "heading": { "label": "Heading Font", "value": "'Cinzel', Georgia, serif" },
+    "body": { "label": "Body Font", "value": "'Montserrat', -apple-system, sans-serif" }
+  }
+}

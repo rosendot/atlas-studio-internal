@@ -1,0 +1,21 @@
+{
+  "name": "Ink & Paper",
+  "slug": "ink-paper",
+  "description": "High-contrast black and white with a single red accent. For law firms, consulting, architecture, or any brand that wants authority without fuss.",
+  "tags": ["minimal", "black", "white", "red-accent", "high-contrast", "law", "consulting", "architecture"],
+  "colors": {
+    "primary": { "label": "Primary", "value": "#dc2626" },
+    "primary_dark": { "label": "Primary Dark", "value": "#b91c1c" },
+    "secondary": { "label": "Secondary / Accent", "value": "#dc2626" },
+    "dark": { "label": "Dark Background", "value": "#0a0a0a" },
+    "cream": { "label": "Light Background", "value": "#fafafa" },
+    "text": { "label": "Body Text", "value": "#171717" },
+    "text_light": { "label": "Muted Text", "value": "#737373" },
+    "border": { "label": "Border", "value": "#e5e5e5" },
+    "white": { "label": "White", "value": "#ffffff" }
+  },
+  "fonts": {
+    "heading": { "label": "Heading Font", "value": "'DM Serif Display', Georgia, serif" },
+    "body": { "label": "Body Font", "value": "'Inter', -apple-system, sans-serif" }
+  }
+}

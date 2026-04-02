@@ -1,0 +1,21 @@
+{
+  "name": "Cobalt Spark",
+  "slug": "cobalt-spark",
+  "description": "Vibrant cobalt blue with electric yellow sparks. Energetic and trustworthy. For tech repair, electric services, cleaning companies, or SaaS brands.",
+  "tags": ["cobalt", "blue", "electric", "yellow", "tech", "energetic", "cleaning", "service"],
+  "colors": {
+    "primary": { "label": "Primary", "value": "#1d4ed8" },
+    "primary_dark": { "label": "Primary Dark", "value": "#1e3a8a" },
+    "secondary": { "label": "Secondary / Accent", "value": "#eab308" },
+    "dark": { "label": "Dark Background", "value": "#0c1529" },
+    "cream": { "label": "Light Background", "value": "#f0f4ff" },
+    "text": { "label": "Body Text", "value": "#1e293b" },
+    "text_light": { "label": "Muted Text", "value": "#6b7fa3" },
+    "border": { "label": "Border", "value": "#c7d2e8" },
+    "white": { "label": "White", "value": "#ffffff" }
+  },
+  "fonts": {
+    "heading": { "label": "Heading Font", "value": "'Poppins', 'Segoe UI', sans-serif" },
+    "body": { "label": "Body Font", "value": "'Work Sans', -apple-system, sans-serif" }
+  }
+}

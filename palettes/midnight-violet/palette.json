@@ -1,0 +1,21 @@
+{
+  "name": "Midnight Violet",
+  "slug": "midnight-violet",
+  "description": "Deep purples, electric violet accents, dark backgrounds. For hookah lounges, music venues, nightclubs, or creative studios.",
+  "tags": ["purple", "violet", "dark", "electric", "nightlife", "creative", "studio"],
+  "colors": {
+    "primary": { "label": "Primary", "value": "#7c3aed" },
+    "primary_dark": { "label": "Primary Dark", "value": "#5b21b6" },
+    "secondary": { "label": "Secondary / Accent", "value": "#c084fc" },
+    "dark": { "label": "Dark Background", "value": "#0f0a1e" },
+    "cream": { "label": "Light Background", "value": "#f5f3ff" },
+    "text": { "label": "Body Text", "value": "#1e1b2e" },
+    "text_light": { "label": "Muted Text", "value": "#7c7896" },
+    "border": { "label": "Border", "value": "#2e2648" },
+    "white": { "label": "White", "value": "#ffffff" }
+  },
+  "fonts": {
+    "heading": { "label": "Heading Font", "value": "'DM Sans', 'Segoe UI', sans-serif" },
+    "body": { "label": "Body Font", "value": "'Inter', -apple-system, sans-serif" }
+  }
+}

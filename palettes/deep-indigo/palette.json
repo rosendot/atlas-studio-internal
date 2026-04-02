@@ -1,0 +1,21 @@
+{
+  "name": "Deep Indigo",
+  "slug": "deep-indigo",
+  "description": "Rich indigo with soft lavender highlights. Mysterious yet approachable. For boutique hotels, perfume shops, event planners, or astrology brands.",
+  "tags": ["indigo", "lavender", "deep", "mysterious", "boutique", "hotel", "events", "luxury"],
+  "colors": {
+    "primary": { "label": "Primary", "value": "#4338ca" },
+    "primary_dark": { "label": "Primary Dark", "value": "#3730a3" },
+    "secondary": { "label": "Secondary / Accent", "value": "#a78bfa" },
+    "dark": { "label": "Dark Background", "value": "#110e24" },
+    "cream": { "label": "Light Background", "value": "#f5f3ff" },
+    "text": { "label": "Body Text", "value": "#1e1b4b" },
+    "text_light": { "label": "Muted Text", "value": "#6b6898" },
+    "border": { "label": "Border", "value": "#c4b5fd" },
+    "white": { "label": "White", "value": "#ffffff" }
+  },
+  "fonts": {
+    "heading": { "label": "Heading Font", "value": "'Cormorant Garamond', Georgia, serif" },
+    "body": { "label": "Body Font", "value": "'Raleway', -apple-system, sans-serif" }
+  }
+}

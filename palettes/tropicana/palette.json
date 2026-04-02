@@ -1,0 +1,21 @@
+{
+  "name": "Tropicana",
+  "slug": "tropicana",
+  "description": "Lush tropical vibes. Deep teal, mango orange, palm green on warm white. For Caribbean restaurants, smoothie bars, island resorts, or surf shops.",
+  "tags": ["tropical", "teal", "mango", "caribbean", "island", "surf", "lush", "vibrant"],
+  "colors": {
+    "primary": { "label": "Primary", "value": "#0f766e" },
+    "primary_dark": { "label": "Primary Dark", "value": "#115e59" },
+    "secondary": { "label": "Secondary / Accent", "value": "#ea580c" },
+    "dark": { "label": "Dark Background", "value": "#0c1f1d" },
+    "cream": { "label": "Light Background", "value": "#fefdf7" },
+    "text": { "label": "Body Text", "value": "#1a2e2b" },
+    "text_light": { "label": "Muted Text", "value": "#5f7a76" },
+    "border": { "label": "Border", "value": "#d1e0dc" },
+    "white": { "label": "White", "value": "#ffffff" }
+  },
+  "fonts": {
+    "heading": { "label": "Heading Font", "value": "'Playfair Display', Georgia, serif" },
+    "body": { "label": "Body Font", "value": "'Raleway', -apple-system, sans-serif" }
+  }
+}

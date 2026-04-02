@@ -1,0 +1,21 @@
+{
+  "name": "Coral Sunset",
+  "slug": "coral-sunset",
+  "description": "Warm coral pinks with soft sand neutrals. Inviting and approachable. For brunch spots, flower shops, wedding venues, or skincare brands.",
+  "tags": ["coral", "pink", "warm", "sunset", "brunch", "wedding", "flowers", "skincare"],
+  "colors": {
+    "primary": { "label": "Primary", "value": "#f43f5e" },
+    "primary_dark": { "label": "Primary Dark", "value": "#e11d48" },
+    "secondary": { "label": "Secondary / Accent", "value": "#f59e0b" },
+    "dark": { "label": "Dark Background", "value": "#2a1215" },
+    "cream": { "label": "Light Background", "value": "#fff5f5" },
+    "text": { "label": "Body Text", "value": "#2a1215" },
+    "text_light": { "label": "Muted Text", "value": "#8b6b70" },
+    "border": { "label": "Border", "value": "#f0d4d8" },
+    "white": { "label": "White", "value": "#ffffff" }
+  },
+  "fonts": {
+    "heading": { "label": "Heading Font", "value": "'Playfair Display', Georgia, serif" },
+    "body": { "label": "Body Font", "value": "'Lato', -apple-system, sans-serif" }
+  }
+}

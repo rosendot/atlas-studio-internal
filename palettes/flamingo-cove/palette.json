@@ -1,0 +1,21 @@
+{
+  "name": "Flamingo Cove",
+  "slug": "flamingo-cove",
+  "description": "Salmon pink with cool mint contrast. Fun, fresh, and feminine without being soft. For frozen yogurt, nail salons, swimwear, or kids' party venues.",
+  "tags": ["salmon", "pink", "mint", "fresh", "fun", "yogurt", "nail-salon", "swimwear"],
+  "colors": {
+    "primary": { "label": "Primary", "value": "#fb7185" },
+    "primary_dark": { "label": "Primary Dark", "value": "#f43f5e" },
+    "secondary": { "label": "Secondary / Accent", "value": "#2dd4bf" },
+    "dark": { "label": "Dark Background", "value": "#1f1215" },
+    "cream": { "label": "Light Background", "value": "#fdf2f4" },
+    "text": { "label": "Body Text", "value": "#2d1a1e" },
+    "text_light": { "label": "Muted Text", "value": "#8e7074" },
+    "border": { "label": "Border", "value": "#f5d0d6" },
+    "white": { "label": "White", "value": "#ffffff" }
+  },
+  "fonts": {
+    "heading": { "label": "Heading Font", "value": "'Fredoka', 'Comic Sans MS', sans-serif" },
+    "body": { "label": "Body Font", "value": "'Rubik', -apple-system, sans-serif" }
+  }
+}

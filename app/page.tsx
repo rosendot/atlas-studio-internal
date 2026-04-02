@@ -2,6 +2,18 @@ import { promises as fs } from "fs";
 import path from "path";
 import Dashboard from "./components/Dashboard";
 
+export interface FontData {
+  name: string;
+  value: string;
+  type: string;
+  source: string;
+  url?: string;
+  weight: string;
+  pairs_with: string[];
+  vibe: string;
+  used_in: string[];
+}
+
 export interface KitVariable {
   label: string;
   type: string;
@@ -69,6 +81,16 @@ export interface TemplateData {
   kit_files: Record<string, string[]>;
   variables: Record<string, KitVariable>;
   fileContents: Record<string, string>;
+}
+
+async function getFonts(): Promise<FontData[]> {
+  const fontsPath = path.join(process.cwd(), "fonts", "fonts.json");
+  try {
+    const raw = await fs.readFile(fontsPath, "utf-8");
+    return JSON.parse(raw) as FontData[];
+  } catch {
+    return [];
+  }
 }
 
 async function getKits(): Promise<KitData[]> {
@@ -208,6 +230,7 @@ async function getTemplates(): Promise<TemplateData[]> {
 }
 
 export default async function Home() {
+  const fonts = await getFonts();
   const kits = await getKits();
   const palettes = await getPalettes();
   const sections = await getSections();
@@ -215,7 +238,7 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen">
-      <Dashboard kits={kits} palettes={palettes} sections={sections} templates={templates} />
+      <Dashboard fonts={fonts} kits={kits} palettes={palettes} sections={sections} templates={templates} />
     </main>
   );
 }

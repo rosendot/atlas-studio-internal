@@ -1,0 +1,21 @@
+{
+  "name": "Electric Lime",
+  "slug": "electric-lime",
+  "description": "Bright lime green with dark charcoal backgrounds. High energy and modern. For fitness studios, smoothie bars, electric scooter rentals, or eco startups.",
+  "tags": ["lime", "green", "electric", "bright", "fitness", "eco", "modern", "energy"],
+  "colors": {
+    "primary": { "label": "Primary", "value": "#84cc16" },
+    "primary_dark": { "label": "Primary Dark", "value": "#65a30d" },
+    "secondary": { "label": "Secondary / Accent", "value": "#06b6d4" },
+    "dark": { "label": "Dark Background", "value": "#111a0e" },
+    "cream": { "label": "Light Background", "value": "#f7fee7" },
+    "text": { "label": "Body Text", "value": "#1a2e05" },
+    "text_light": { "label": "Muted Text", "value": "#6b7f55" },
+    "border": { "label": "Border", "value": "#d4e7b5" },
+    "white": { "label": "White", "value": "#ffffff" }
+  },
+  "fonts": {
+    "heading": { "label": "Heading Font", "value": "'DM Sans', 'Segoe UI', sans-serif" },
+    "body": { "label": "Body Font", "value": "'Inter', -apple-system, sans-serif" }
+  }
+}

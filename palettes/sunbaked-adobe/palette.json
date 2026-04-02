@@ -1,0 +1,21 @@
+{
+  "name": "Sunbaked Adobe",
+  "slug": "sunbaked-adobe",
+  "description": "Sun-drenched warm whites, burnt sienna, dusty turquoise pops. For Mediterranean restaurants, Mexican bakeries, desert resorts, or tile shops.",
+  "tags": ["mediterranean", "adobe", "sienna", "turquoise", "sun", "warm-white", "mexican", "desert"],
+  "colors": {
+    "primary": { "label": "Primary", "value": "#b45309" },
+    "primary_dark": { "label": "Primary Dark", "value": "#92400e" },
+    "secondary": { "label": "Secondary / Accent", "value": "#0d9488" },
+    "dark": { "label": "Dark Background", "value": "#292018" },
+    "cream": { "label": "Light Background", "value": "#fdf8f0" },
+    "text": { "label": "Body Text", "value": "#3d2e1c" },
+    "text_light": { "label": "Muted Text", "value": "#8a7560" },
+    "border": { "label": "Border", "value": "#e0d5c5" },
+    "white": { "label": "White", "value": "#ffffff" }
+  },
+  "fonts": {
+    "heading": { "label": "Heading Font", "value": "'Josefin Slab', Georgia, serif" },
+    "body": { "label": "Body Font", "value": "'Lato', -apple-system, sans-serif" }
+  }
+}
