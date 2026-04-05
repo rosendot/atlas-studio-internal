@@ -1,0 +1,107 @@
+/* Header Classic — see README.md for usage */
+
+.header-classic {
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	transition: box-shadow 0.3s;
+}
+
+.header-classic.is-scrolled {
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header-classic__inner {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 2rem;
+	height: 72px;
+}
+
+.header-classic__logo {
+	font-size: 1.4rem;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.header-classic__nav {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.header-classic__nav a {
+	font-size: 0.85rem;
+	font-weight: 500;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	opacity: 0.8;
+	transition: opacity 0.2s;
+}
+
+.header-classic__nav a:hover {
+	opacity: 1;
+}
+
+.header-classic__cta {
+	display: inline-block;
+	padding: 0.6rem 1.5rem;
+	font-size: 0.8rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-decoration: none;
+	border-radius: 4px;
+	transition: opacity 0.2s;
+}
+
+.header-classic__cta:hover {
+	opacity: 0.9;
+}
+
+/* Hamburger */
+.header-classic__hamburger {
+	display: none;
+	flex-direction: column;
+	gap: 5px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 4px;
+}
+
+.header-classic__hamburger span {
+	display: block;
+	width: 24px;
+	height: 2px;
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+@media (max-width: 768px) {
+	.header-classic__nav {
+		display: none;
+	}
+
+	.header-classic__nav.is-open {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		top: 72px;
+		left: 0;
+		right: 0;
+		padding: 1.5rem 2rem;
+		gap: 1rem;
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+	}
+
+	.header-classic__hamburger {
+		display: flex;
+	}
+}

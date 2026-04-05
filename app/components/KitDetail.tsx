@@ -23,6 +23,14 @@ import FooterClassic from "./kit-previews/FooterClassic";
 import FooterMinimal from "./kit-previews/FooterMinimal";
 import FooterMega from "./kit-previews/FooterMega";
 import FooterCta from "./kit-previews/FooterCta";
+import HeaderClassic from "./kit-previews/HeaderClassic";
+import HeaderTransparent from "./kit-previews/HeaderTransparent";
+import MobileNavDrawer from "./kit-previews/MobileNavDrawer";
+import TestimonialCards from "./kit-previews/TestimonialCards";
+import TestimonialSlider from "./kit-previews/TestimonialSlider";
+import LogoWall from "./kit-previews/LogoWall";
+import StatsCounter from "./kit-previews/StatsCounter";
+import BreadcrumbsPreview from "./kit-previews/Breadcrumbs";
 import FaqTwoColumn from "./kit-previews/FaqTwoColumn";
 import FaqCards from "./kit-previews/FaqCards";
 import FaqTabbed from "./kit-previews/FaqTabbed";
@@ -53,6 +61,14 @@ const KIT_PREVIEWS: Record<string, ComponentType<Record<string, string | number>
   "footer-minimal": FooterMinimal,
   "footer-mega": FooterMega,
   "footer-cta": FooterCta,
+  "header-classic": HeaderClassic,
+  "header-transparent": HeaderTransparent,
+  "mobile-nav-drawer": MobileNavDrawer,
+  "testimonial-cards": TestimonialCards,
+  "testimonial-slider": TestimonialSlider,
+  "logo-wall": LogoWall,
+  "stats-counter": StatsCounter,
+  "breadcrumbs": BreadcrumbsPreview,
 };
 
 const LANG_COLORS: Record<string, string> = {

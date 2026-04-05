@@ -1,0 +1,20 @@
+{
+  "name": "Breadcrumbs",
+  "slug": "breadcrumbs",
+  "description": "Hierarchical navigation trail showing the user's location in the site structure. SEO-friendly with schema markup.",
+  "category": "navigation",
+  "tags": ["breadcrumbs", "navigation", "hierarchy", "seo", "schema", "trail", "wayfinding"],
+  "files": {
+    "css": ["breadcrumbs.css"],
+    "php": ["breadcrumbs.php"]
+  },
+  "variables": {
+    "separator": {
+      "label": "Separator character",
+      "type": "string",
+      "default": "›"
+    }
+  },
+  "variants": {},
+  "dependencies": []
+}

@@ -1,0 +1,70 @@
+/* Logo Wall — see README.md for usage */
+
+.logo-wall {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 4rem 1rem;
+}
+
+.logo-wall__header {
+	text-align: center;
+	margin-bottom: 2.5rem;
+}
+
+.logo-wall__title {
+	font-size: 0.85rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	opacity: 0.5;
+	margin: 0;
+}
+
+.logo-wall__grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 2rem;
+	align-items: center;
+}
+
+.logo-wall__item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1.5rem;
+	filter: grayscale(100%);
+	opacity: 0.5;
+	transition: filter 0.3s, opacity 0.3s;
+}
+
+.logo-wall__item:hover {
+	filter: grayscale(0%);
+	opacity: 1;
+}
+
+.logo-wall__item img {
+	max-width: 100%;
+	max-height: 48px;
+	object-fit: contain;
+}
+
+/* Placeholder text logos for previews */
+.logo-wall__placeholder {
+	font-size: 1.1rem;
+	font-weight: 700;
+	letter-spacing: 1px;
+	white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+	.logo-wall__grid {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.logo-wall__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Transparent Preview</title>
+    <link rel="stylesheet" href="header-transparent.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        .header-transparent { color: #faf6f0; }
+        .header-transparent.is-scrolled { background: #1a1208; color: #faf6f0; }
+        .header-transparent__logo { color: inherit; font-family: Georgia, serif; }
+        .header-transparent__nav a { color: inherit; }
+        .header-transparent__cta { color: inherit; }
+        .header-transparent__hamburger span { background: currentColor; }
+        .hero-demo { height: 100vh; background: linear-gradient(135deg, #8B6914, #3d2a06); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2rem; font-family: Georgia, serif; }
+        .demo-content { padding: 4rem 2rem; text-align: center; color: #888; background: #faf6f0; min-height: 100vh; }
+    </style>
+</head>
+<body>
+    <header class="header-transparent">
+        <div class="header-transparent__inner">
+            <a href="#" class="header-transparent__logo">Business Name</a>
+            <ul class="header-transparent__nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <a href="#" class="header-transparent__cta">Reserve a Table</a>
+            <button class="header-transparent__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+    <div class="hero-demo">Header overlays this hero section</div>
+    <div class="demo-content"><p>Scroll down to see the header transition to solid...</p></div>
+    <script src="header-transparent.js"></script>
+</body>
+</html>

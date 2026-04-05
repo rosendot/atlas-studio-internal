@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats Counter Preview</title>
+    <link rel="stylesheet" href="stats-counter.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        .stats-counter { background: #1a1208; color: #faf6f0; }
+        .stats-counter__number { font-family: Georgia, serif; color: #d4a017; }
+        .before-section { padding: 4rem 2rem; text-align: center; background: #faf6f0; color: #888; }
+    </style>
+</head>
+<body>
+    <div class="before-section"><p>Content above stats...</p></div>
+    <section class="stats-counter">
+        <div class="stats-counter__inner">
+            <div class="stats-counter__item">
+                <div class="stats-counter__number" data-target="500" data-suffix="+">0+</div>
+                <div class="stats-counter__label">Happy Clients</div>
+            </div>
+            <div class="stats-counter__item">
+                <div class="stats-counter__number" data-target="15" data-suffix="">0</div>
+                <div class="stats-counter__label">Years Experience</div>
+            </div>
+            <div class="stats-counter__item">
+                <div class="stats-counter__number" data-target="50" data-suffix="+">0+</div>
+                <div class="stats-counter__label">Team Members</div>
+            </div>
+            <div class="stats-counter__item">
+                <div class="stats-counter__number" data-target="98" data-suffix="%">0%</div>
+                <div class="stats-counter__label">Satisfaction Rate</div>
+            </div>
+        </div>
+    </section>
+    <div class="before-section"><p>Content below stats...</p></div>
+    <script src="stats-counter.js"></script>
+</body>
+</html>

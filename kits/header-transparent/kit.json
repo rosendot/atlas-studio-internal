@@ -1,0 +1,21 @@
+{
+  "name": "Header Transparent",
+  "slug": "header-transparent",
+  "description": "Transparent overlay header that sits on top of the hero. Transitions to solid background on scroll.",
+  "category": "navigation",
+  "tags": ["header", "transparent", "overlay", "navigation", "sticky", "scroll", "hero"],
+  "files": {
+    "css": ["header-transparent.css"],
+    "js": ["header-transparent.js"],
+    "php": ["header-transparent.php"]
+  },
+  "variables": {
+    "sectionTitle": {
+      "label": "Section title",
+      "type": "string",
+      "default": ""
+    }
+  },
+  "variants": {},
+  "dependencies": []
+}

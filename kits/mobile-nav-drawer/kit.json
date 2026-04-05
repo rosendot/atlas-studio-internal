@@ -1,0 +1,30 @@
+{
+  "name": "Mobile Nav Drawer",
+  "slug": "mobile-nav-drawer",
+  "description": "Off-canvas slide-in navigation drawer for mobile. Triggered by hamburger button with smooth slide and backdrop overlay.",
+  "category": "navigation",
+  "tags": ["navigation", "mobile", "drawer", "off-canvas", "hamburger", "slide", "responsive"],
+  "files": {
+    "css": ["mobile-nav-drawer.css"],
+    "js": ["mobile-nav-drawer.js"],
+    "php": ["mobile-nav-drawer.php"]
+  },
+  "variables": {
+    "drawerSide": {
+      "label": "Drawer side (left or right)",
+      "type": "string",
+      "default": "right"
+    }
+  },
+  "variants": {
+    "from-left": {
+      "label": "Slide from left",
+      "class": "mobile-nav-drawer--left"
+    },
+    "from-right": {
+      "label": "Slide from right",
+      "class": "mobile-nav-drawer--right"
+    }
+  },
+  "dependencies": []
+}

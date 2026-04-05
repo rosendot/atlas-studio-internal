@@ -1,0 +1,21 @@
+{
+  "name": "Header Classic",
+  "slug": "header-classic",
+  "description": "Standard site header with logo left, navigation right, and mobile hamburger toggle. Sticky on scroll.",
+  "category": "navigation",
+  "tags": ["header", "navigation", "navbar", "sticky", "hamburger", "mobile", "responsive"],
+  "files": {
+    "css": ["header-classic.css"],
+    "js": ["header-classic.js"],
+    "php": ["header-classic.php"]
+  },
+  "variables": {
+    "sectionTitle": {
+      "label": "Section title",
+      "type": "string",
+      "default": ""
+    }
+  },
+  "variants": {},
+  "dependencies": []
+}

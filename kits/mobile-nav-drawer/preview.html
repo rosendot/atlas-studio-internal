@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Nav Drawer Preview</title>
+    <link rel="stylesheet" href="mobile-nav-drawer.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #faf6f0; }
+        .mobile-nav-drawer { background: #1a1208; color: #faf6f0; }
+        .mobile-nav-drawer__brand { font-family: Georgia, serif; }
+        .mobile-nav-drawer__close { color: #faf6f0; }
+        .mobile-nav-drawer__nav a { color: #faf6f0; }
+        .mobile-nav-drawer__cta { background: #b42318; color: #fff; }
+        .mobile-nav-drawer__social-link { color: #faf6f0; }
+        .mobile-nav-drawer__nav li { border-color: rgba(250,246,240,0.08); }
+        .demo-header { background: #1a1208; color: #faf6f0; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .demo-header button { background: none; border: none; color: #faf6f0; font-size: 1.5rem; cursor: pointer; }
+        .demo-content { padding: 4rem 2rem; text-align: center; color: #888; }
+    </style>
+</head>
+<body>
+    <div class="demo-header">
+        <span style="font-family: Georgia, serif; font-weight: 700;">Business Name</span>
+        <button data-drawer-open aria-label="Open menu">&#9776;</button>
+    </div>
+    <div class="demo-content"><p>Click the hamburger icon to open the drawer →</p></div>
+
+    <div class="mobile-nav-drawer__backdrop"></div>
+    <nav class="mobile-nav-drawer mobile-nav-drawer--right">
+        <button class="mobile-nav-drawer__close">&times;</button>
+        <div class="mobile-nav-drawer__brand">Business Name</div>
+        <ul class="mobile-nav-drawer__nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <a href="#" class="mobile-nav-drawer__cta">Reserve a Table</a>
+        <div class="mobile-nav-drawer__social">
+            <a href="#" class="mobile-nav-drawer__social-link">FB</a>
+            <a href="#" class="mobile-nav-drawer__social-link">IG</a>
+            <a href="#" class="mobile-nav-drawer__social-link">YP</a>
+        </div>
+    </nav>
+
+    <script src="mobile-nav-drawer.js"></script>
+</body>
+</html>

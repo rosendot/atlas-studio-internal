@@ -1,0 +1,50 @@
+/* Breadcrumbs — see README.md for usage */
+
+.breadcrumbs {
+	padding: 0.85rem 2rem;
+	font-size: 0.8rem;
+}
+
+.breadcrumbs__list {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.5rem;
+	list-style: none;
+	padding: 0;
+}
+
+.breadcrumbs__item {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.breadcrumbs__link {
+	text-decoration: none;
+	opacity: 0.6;
+	transition: opacity 0.2s;
+}
+
+.breadcrumbs__link:hover {
+	opacity: 1;
+}
+
+.breadcrumbs__separator {
+	opacity: 0.35;
+	font-size: 0.9em;
+}
+
+.breadcrumbs__current {
+	opacity: 0.9;
+	font-weight: 500;
+}
+
+@media (max-width: 480px) {
+	.breadcrumbs {
+		padding: 0.75rem 1rem;
+		font-size: 0.75rem;
+	}
+}

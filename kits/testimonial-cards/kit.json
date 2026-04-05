@@ -1,0 +1,25 @@
+{
+  "name": "Testimonial Cards",
+  "slug": "testimonial-cards",
+  "description": "Grid of client testimonial cards with photo, name, role, star rating, and quote text.",
+  "category": "section",
+  "tags": ["testimonials", "reviews", "cards", "grid", "social-proof", "stars", "rating"],
+  "files": {
+    "css": ["testimonial-cards.css"],
+    "php": ["testimonial-cards.php"]
+  },
+  "variables": {
+    "columns": {
+      "label": "Columns",
+      "type": "number",
+      "default": 3
+    },
+    "sectionTitle": {
+      "label": "Section title",
+      "type": "string",
+      "default": "What Our Clients Say"
+    }
+  },
+  "variants": {},
+  "dependencies": []
+}

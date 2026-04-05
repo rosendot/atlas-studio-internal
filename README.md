@@ -56,6 +56,14 @@ Each tab and detail view has its own URL (e.g., `/kits/hero-split`). Refreshing 
 | `lightbox-gallery/` | Interactive | Thumbnail grid with full-screen modal viewer and keyboard nav |
 | `before-after-slider/` | Interactive | Draggable divider comparing two overlaid images |
 | `image-comparison/` | Section | Side-by-side image pairs with labels and captions |
+| `header-classic/` | Navigation | Standard header with logo, nav, CTA, mobile hamburger |
+| `header-transparent/` | Navigation | Overlay header that goes solid on scroll |
+| `mobile-nav-drawer/` | Navigation | Off-canvas slide-in mobile navigation with backdrop |
+| `testimonial-cards/` | Section | Grid of client quote cards with photos and star ratings |
+| `testimonial-slider/` | Interactive | Single-testimonial carousel with crossfade and dots |
+| `logo-wall/` | Section | Client logo grid, grayscale with color on hover |
+| `stats-counter/` | Section | Animated number counters that count up on scroll |
+| `breadcrumbs/` | Navigation | Hierarchical nav trail with schema.org SEO markup |
 | `footer-classic/` | Section | Multi-column footer with logo, contact, links, and hours |
 | `footer-minimal/` | Section | Clean single-line footer with logo, copyright, and social icons |
 | `footer-mega/` | Section | Large footer with about, services, links, newsletter, and contact row |

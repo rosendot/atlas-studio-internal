@@ -1,0 +1,21 @@
+{
+  "name": "Stats Counter",
+  "slug": "stats-counter",
+  "description": "Row of animated counters showing key business metrics. Numbers count up on scroll with labels below.",
+  "category": "section",
+  "tags": ["stats", "counter", "numbers", "metrics", "social-proof", "animated", "scroll"],
+  "files": {
+    "css": ["stats-counter.css"],
+    "js": ["stats-counter.js"],
+    "php": ["stats-counter.php"]
+  },
+  "variables": {
+    "sectionTitle": {
+      "label": "Section title",
+      "type": "string",
+      "default": ""
+    }
+  },
+  "variants": {},
+  "dependencies": []
+}

@@ -58,7 +58,15 @@ wp-agency-vault/
 │   ├── footer-classic/      # Multi-column footer (logo, links, contact, hours)
 │   ├── footer-minimal/      # Single-line footer (logo, copyright, social)
 │   ├── footer-mega/         # Large footer (about, services, newsletter, contact)
-│   └── footer-cta/          # CTA banner + standard footer columns
+│   ├── footer-cta/          # CTA banner + standard footer columns
+│   ├── header-classic/      # Logo + nav + CTA + mobile hamburger, sticky
+│   ├── header-transparent/  # Transparent overlay header, solid on scroll
+│   ├── mobile-nav-drawer/   # Off-canvas slide-in mobile nav with backdrop
+│   ├── testimonial-cards/   # Grid of quote cards with photos + star ratings
+│   ├── testimonial-slider/  # Single-testimonial carousel with crossfade
+│   ├── logo-wall/           # Client logo grid, grayscale → color on hover
+│   ├── stats-counter/       # Animated number counters on scroll
+│   └── breadcrumbs/         # Hierarchical nav trail with schema.org markup
 ├── palettes/                # Color systems + typography (mix and match with anything)
 │   └── ember-hearth/        # Rich reds, warm golds, serif headings
 ├── sections/                # Full page-level compositions of kits + palette (e.g., a complete menu page)

@@ -1,0 +1,26 @@
+{
+  "name": "Testimonial Slider",
+  "slug": "testimonial-slider",
+  "description": "Single-testimonial carousel with large quote, author info, and auto-rotation with dot navigation.",
+  "category": "interactive",
+  "tags": ["testimonials", "slider", "carousel", "reviews", "social-proof", "quotes", "auto-rotate"],
+  "files": {
+    "css": ["testimonial-slider.css"],
+    "js": ["testimonial-slider.js"],
+    "php": ["testimonial-slider.php"]
+  },
+  "variables": {
+    "interval": {
+      "label": "Slide interval (ms)",
+      "type": "number",
+      "default": 6000
+    },
+    "sectionTitle": {
+      "label": "Section title",
+      "type": "string",
+      "default": "What Our Clients Say"
+    }
+  },
+  "variants": {},
+  "dependencies": []
+}

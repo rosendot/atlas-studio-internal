@@ -1,0 +1,25 @@
+{
+  "name": "Logo Wall",
+  "slug": "logo-wall",
+  "description": "Grid of client or partner logos. Grayscale by default with color on hover. Builds trust and credibility.",
+  "category": "section",
+  "tags": ["logos", "clients", "partners", "trust", "social-proof", "grayscale", "grid"],
+  "files": {
+    "css": ["logo-wall.css"],
+    "php": ["logo-wall.php"]
+  },
+  "variables": {
+    "columns": {
+      "label": "Columns",
+      "type": "number",
+      "default": 5
+    },
+    "sectionTitle": {
+      "label": "Section title",
+      "type": "string",
+      "default": "Trusted By"
+    }
+  },
+  "variants": {},
+  "dependencies": []
+}

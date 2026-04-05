@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial Slider Preview</title>
+    <link rel="stylesheet" href="testimonial-slider.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #faf6f0; color: #2c2416; }
+        .testimonial-slider__title { font-family: Georgia, serif; color: #1a1208; }
+        .testimonial-slider__quote-mark { color: #d4a017; }
+        .testimonial-slider__stars { color: #d4a017; }
+        .testimonial-slider__avatar { background: #b42318; color: #fff; margin: 0 auto 0.75rem; }
+        .testimonial-slider__dot { background: #1a1208; }
+    </style>
+</head>
+<body>
+    <section class="testimonial-slider" data-interval="6000">
+        <div class="testimonial-slider__header">
+            <h2 class="testimonial-slider__title">What Our Clients Say</h2>
+        </div>
+        <div class="testimonial-slider__viewport">
+            <div class="testimonial-slider__slide is-active">
+                <div class="testimonial-slider__stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                <div class="testimonial-slider__quote-mark">&ldquo;</div>
+                <p class="testimonial-slider__quote">Amazing service and incredible food. We come back every week.</p>
+                <div class="testimonial-slider__name">Sarah M.</div>
+                <div class="testimonial-slider__role">Regular Customer</div>
+            </div>
+            <div class="testimonial-slider__slide">
+                <div class="testimonial-slider__stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                <div class="testimonial-slider__quote-mark">&ldquo;</div>
+                <p class="testimonial-slider__quote">The best dining experience in the city. Highly recommend the tasting menu.</p>
+                <div class="testimonial-slider__name">James R.</div>
+                <div class="testimonial-slider__role">Food Critic</div>
+            </div>
+            <div class="testimonial-slider__slide">
+                <div class="testimonial-slider__stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                <div class="testimonial-slider__quote-mark">&ldquo;</div>
+                <p class="testimonial-slider__quote">Perfect for date night. The atmosphere is warm and the staff is wonderful.</p>
+                <div class="testimonial-slider__name">Emily T.</div>
+                <div class="testimonial-slider__role">Local Guide</div>
+            </div>
+        </div>
+        <div class="testimonial-slider__dots">
+            <button class="testimonial-slider__dot is-active"></button>
+            <button class="testimonial-slider__dot"></button>
+            <button class="testimonial-slider__dot"></button>
+        </div>
+    </section>
+    <script src="testimonial-slider.js"></script>
+</body>
+</html>

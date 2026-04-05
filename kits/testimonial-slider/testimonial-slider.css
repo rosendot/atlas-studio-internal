@@ -1,0 +1,120 @@
+/* Testimonial Slider — see README.md for usage */
+
+.testimonial-slider {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 4rem 1rem;
+	text-align: center;
+}
+
+.testimonial-slider__header {
+	margin-bottom: 2.5rem;
+}
+
+.testimonial-slider__title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin: 0;
+}
+
+.testimonial-slider__viewport {
+	position: relative;
+	overflow: hidden;
+	min-height: 250px;
+}
+
+.testimonial-slider__slide {
+	position: absolute;
+	inset: 0;
+	opacity: 0;
+	transition: opacity 0.6s ease;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.testimonial-slider__slide.is-active {
+	opacity: 1;
+	position: relative;
+}
+
+.testimonial-slider__quote-mark {
+	font-size: 3rem;
+	line-height: 1;
+	opacity: 0.3;
+	margin-bottom: 1rem;
+}
+
+.testimonial-slider__quote {
+	font-size: 1.2rem;
+	line-height: 1.8;
+	opacity: 0.85;
+	max-width: 600px;
+	margin: 0 auto 1.5rem;
+	font-style: italic;
+}
+
+.testimonial-slider__avatar {
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-bottom: 0.75rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.testimonial-slider__name {
+	font-size: 0.95rem;
+	font-weight: 600;
+	margin-bottom: 0.25rem;
+}
+
+.testimonial-slider__role {
+	font-size: 0.8rem;
+	opacity: 0.6;
+}
+
+.testimonial-slider__stars {
+	display: flex;
+	gap: 2px;
+	justify-content: center;
+	margin-bottom: 1.5rem;
+	font-size: 1rem;
+}
+
+.testimonial-slider__dots {
+	display: flex;
+	gap: 0.5rem;
+	justify-content: center;
+	margin-top: 2rem;
+}
+
+.testimonial-slider__dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	opacity: 0.3;
+	transition: opacity 0.3s;
+}
+
+.testimonial-slider__dot.is-active {
+	opacity: 1;
+}
+
+@media (max-width: 768px) {
+	.testimonial-slider__title {
+		font-size: 2rem;
+	}
+
+	.testimonial-slider__quote {
+		font-size: 1.05rem;
+	}
+}
