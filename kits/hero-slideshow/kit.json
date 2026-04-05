@@ -1,0 +1,36 @@
+{
+  "name": "Hero Slideshow",
+  "slug": "hero-slideshow",
+  "description": "Full-width hero with auto-rotating background images, crossfade transitions, slide indicators, and centered text.",
+  "category": "section",
+  "tags": ["hero", "slideshow", "carousel", "banner", "landing", "cta", "fade", "auto-rotate"],
+  "files": {
+    "css": ["hero-slideshow.css"],
+    "js": ["hero-slideshow.js"],
+    "php": ["hero-slideshow.php"]
+  },
+  "variables": {
+    "minHeight": {
+      "label": "Minimum height",
+      "type": "string",
+      "default": "90vh"
+    },
+    "overlayColor": {
+      "label": "Overlay color",
+      "type": "color",
+      "default": "rgba(26, 18, 8, 0.55)"
+    },
+    "interval": {
+      "label": "Slide interval (ms)",
+      "type": "number",
+      "default": 5000
+    },
+    "maxWidth": {
+      "label": "Content max width",
+      "type": "string",
+      "default": "750px"
+    }
+  },
+  "variants": {},
+  "dependencies": []
+}

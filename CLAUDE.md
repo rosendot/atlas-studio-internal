@@ -7,18 +7,40 @@ Personal knowledge base, reusable toolkit, and internal dashboard for building W
 ```
 wp-agency-vault/
 ├── app/                     # Next.js dashboard UI (TypeScript + Tailwind)
-│   ├── components/          # Dashboard, TemplateBrowser, SectionBrowser, KitBrowser, PaletteBrowser + Detail views
+│   ├── components/          # NavHeader, Browser, Detail, and kit-preview components
+│   │   ├── NavHeader.tsx    # Shared header with tab navigation (uses usePathname)
+│   │   ├── kit-previews/    # TSX preview components for each kit
+│   │   └── template-previews/ # TSX preview components for each template
+│   ├── lib/
+│   │   └── data.ts          # Shared types + data-fetching functions
+│   ├── templates/
+│   │   ├── page.tsx         # Templates list page
+│   │   └── [slug]/page.tsx  # Template detail page
+│   ├── sections/
+│   │   ├── page.tsx         # Sections list page
+│   │   └── [slug]/page.tsx  # Section detail page
+│   ├── kits/
+│   │   ├── page.tsx         # Kits list page
+│   │   └── [slug]/page.tsx  # Kit detail page
+│   ├── palettes/
+│   │   ├── page.tsx         # Palettes list page
+│   │   └── [slug]/page.tsx  # Palette detail page
+│   ├── fonts/
+│   │   └── page.tsx         # Fonts list page
 │   ├── api/
 │   │   ├── kit-preview/     # Serves kit preview.html with correct asset paths
 │   │   ├── kit-file/        # Serves kit static files (CSS, JS)
 │   │   ├── template-preview/# Serves template preview.html
 │   │   └── template-file/   # Serves template static files
-│   ├── page.tsx             # Reads kit.json, template.json, palette.json at build time
-│   ├── layout.tsx           # Root layout
+│   ├── page.tsx             # Root redirect to /templates
+│   ├── layout.tsx           # Root layout with NavHeader + data counts
 │   └── globals.css          # Dark theme variables
 ├── kits/                    # Individual components — the building blocks
 │   ├── infinite-carousel/   # Carousel with infinite loop, arrows, swipe
 │   ├── hero-section/        # Full-width hero with overlay
+│   ├── hero-split/          # 50/50 split hero (text + image, left/right variants)
+│   ├── hero-video/          # Looping video background hero
+│   ├── hero-slideshow/      # Auto-rotating background images with crossfade
 │   ├── google-map-embed/    # Maps iframe + contact info grid
 │   ├── faq-accordion/       # Expandable Q&A with animations
 │   ├── faq-two-column/      # Two-column FAQ (questions left, answer right)
@@ -45,29 +67,56 @@ wp-agency-vault/
 
 Run with `npm run dev` → http://localhost:3000
 
-Four tabs: **Templates**, **Sections**, **Kits**, and **Palettes**.
+### Routing
+The dashboard uses **Next.js App Router file-based routing**. Each tab is its own route, and each detail view has a dedicated URL with a dynamic `[slug]` segment. Refreshing the page stays on the current view. Browser back/forward works natively.
 
-### Templates tab
+| Route | Page |
+|-------|------|
+| `/templates` | Template list |
+| `/templates/[slug]` | Template detail (preview, code, variables, palette picker) |
+| `/sections` | Section list |
+| `/sections/[slug]` | Section detail (preview, code, variables, palette picker) |
+| `/kits` | Kit list |
+| `/kits/[slug]` | Kit detail (preview, code, variables) |
+| `/palettes` | Palette list |
+| `/palettes/[slug]` | Palette detail (swatches, typography, CSS output) |
+| `/fonts` | Font browser |
+| `/` | Redirects to `/templates` |
+
+### Navigation
+- The shared `NavHeader` component lives in `layout.tsx` and persists across all routes
+- Tab highlighting uses `usePathname()` to match the current route
+- Tab counts are fetched server-side via `getCounts()` in the layout
+- Browser components use `<Link>` for card navigation (not `onClick` + `setState`)
+- Detail components use `<Link>` for back navigation (not `onBack` callbacks)
+
+### Templates tab (`/templates`)
 - Browse templates as cards with live preview thumbnails
 - Search by name or tag
-- Click a template to see: full-page live preview, code viewer with file tabs, content variables, palette picker
+- Click a template to navigate to `/templates/[slug]`: full-page live preview, code viewer with file tabs, content variables, palette picker
 - Switch palettes to see the same layout with different color schemes
 
-### Sections tab
+### Sections tab (`/sections`)
 - Browse pre-built page sections by category (menu, hero, faq, gallery, etc.)
 - Search by name or tag
-- Click a section to see: live preview with palette picker, code viewer, content variables
+- Click a section to navigate to `/sections/[slug]`: live preview with palette picker, code viewer, content variables
 - Sections focus on layout structure — colors come from the palette
 
-### Kits tab
+### Kits tab (`/kits`)
 - Browse kits filtered by category (Sections, Interactive, Navigation, Data)
 - Search by name or tag
-- Click a kit to see: live preview, code viewer with file tabs, customizable variables, tags, variants, dependencies
+- Click a kit to navigate to `/kits/[slug]`: live preview, code viewer with file tabs, customizable variables, tags, variants, dependencies
 
-### Palettes tab
+### Palettes tab (`/palettes`)
 - Browse palettes as cards with color swatches and font previews
 - Search by name or tag
-- Click a palette to see: full color swatches, typography preview, CSS custom properties output
+- Click a palette to navigate to `/palettes/[slug]`: full color swatches, typography preview, CSS custom properties output
+
+### Fonts tab (`/fonts`)
+- Browse fonts filtered by type (serif, sans-serif, slab-serif, display)
+- Search by name, vibe, or pairing
+- Adjustable preview size slider
+- Shows font pairings and which palettes use each font
 
 ## Four-Layer Architecture
 

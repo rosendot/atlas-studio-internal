@@ -1,0 +1,92 @@
+/* Hero Split — see README.md for usage */
+
+.hero-split {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	min-height: 80vh;
+}
+
+/* Reverse order: image left, content right */
+.hero-split--right {
+	direction: rtl;
+}
+
+.hero-split--right > * {
+	direction: ltr;
+}
+
+/* Content side */
+.hero-split__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 4rem 3.5rem;
+}
+
+.hero-split__label {
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin-bottom: 1rem;
+	font-weight: 600;
+}
+
+.hero-split__title {
+	font-size: 3.25rem;
+	line-height: 1.1;
+	margin-bottom: 1.25rem;
+}
+
+.hero-split__text {
+	font-size: 1.1rem;
+	line-height: 1.7;
+	opacity: 0.75;
+	margin-bottom: 2.5rem;
+	max-width: 500px;
+}
+
+.hero-split__buttons {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+/* Image side */
+.hero-split__image {
+	background-size: cover;
+	background-position: center;
+	min-height: 100%;
+}
+
+@media (max-width: 768px) {
+	.hero-split {
+		grid-template-columns: 1fr;
+	}
+
+	.hero-split--right {
+		direction: ltr;
+	}
+
+	.hero-split__image {
+		min-height: 50vh;
+		order: -1;
+	}
+
+	.hero-split__content {
+		padding: 3rem 2rem;
+	}
+
+	.hero-split__title {
+		font-size: 2.5rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.hero-split__title {
+		font-size: 2rem;
+	}
+
+	.hero-split__content {
+		padding: 2rem 1.5rem;
+	}
+}

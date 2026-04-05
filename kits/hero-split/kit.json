@@ -1,0 +1,39 @@
+{
+  "name": "Hero Split",
+  "slug": "hero-split",
+  "description": "50/50 split hero with text on one side and an image on the other. Supports left and right content alignment.",
+  "category": "section",
+  "tags": ["hero", "split", "50-50", "banner", "landing", "cta", "image"],
+  "files": {
+    "css": ["hero-split.css"],
+    "php": ["hero-split.php"]
+  },
+  "variables": {
+    "minHeight": {
+      "label": "Minimum height",
+      "type": "string",
+      "default": "80vh"
+    },
+    "contentSide": {
+      "label": "Content side (left or right)",
+      "type": "string",
+      "default": "left"
+    },
+    "imageBg": {
+      "label": "Image side background",
+      "type": "color",
+      "default": "#8B6914"
+    }
+  },
+  "variants": {
+    "content-left": {
+      "label": "Content Left / Image Right",
+      "class": "hero-split--left"
+    },
+    "content-right": {
+      "label": "Content Right / Image Left",
+      "class": "hero-split--right"
+    }
+  },
+  "dependencies": []
+}

@@ -1,0 +1,135 @@
+/* Hero Slideshow — see README.md for usage */
+
+.hero-slideshow {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 90vh;
+	background: #1a1208;
+	color: #ffffff;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+
+/* Slide backgrounds */
+.hero-slideshow__slides {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+}
+
+.hero-slideshow__slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-size: cover;
+	background-position: center;
+	opacity: 0;
+	transition: opacity 1.2s ease-in-out;
+}
+
+.hero-slideshow__slide.is-active {
+	opacity: 1;
+}
+
+/* Dark overlay */
+.hero-slideshow__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(26, 18, 8, 0.55);
+	z-index: 1;
+}
+
+/* Content */
+.hero-slideshow__content {
+	position: relative;
+	z-index: 2;
+	max-width: 750px;
+	padding: 2rem;
+}
+
+.hero-slideshow__label {
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin-bottom: 1rem;
+	font-weight: 600;
+}
+
+.hero-slideshow__title {
+	font-size: 4rem;
+	line-height: 1.1;
+	margin-bottom: 1.25rem;
+}
+
+.hero-slideshow__text {
+	font-size: 1.15rem;
+	line-height: 1.8;
+	opacity: 0.85;
+	margin-bottom: 2.5rem;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.hero-slideshow__buttons {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+/* Slide indicators */
+.hero-slideshow__indicators {
+	position: absolute;
+	bottom: 2rem;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 0.5rem;
+	z-index: 3;
+}
+
+.hero-slideshow__dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.4);
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	transition: background 0.3s;
+}
+
+.hero-slideshow__dot.is-active {
+	background: #ffffff;
+}
+
+@media (max-width: 768px) {
+	.hero-slideshow__title {
+		font-size: 2.75rem;
+	}
+
+	.hero-slideshow__text {
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.hero-slideshow__title {
+		font-size: 2.25rem;
+	}
+
+	.hero-slideshow__text {
+		font-size: 0.95rem;
+	}
+}

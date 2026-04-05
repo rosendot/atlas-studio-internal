@@ -1,0 +1,35 @@
+{
+  "name": "Hero Video",
+  "slug": "hero-video",
+  "description": "Full-width hero with a looping background video, dark overlay, and centered text with CTA buttons.",
+  "category": "section",
+  "tags": ["hero", "video", "banner", "landing", "cta", "overlay", "fullscreen"],
+  "files": {
+    "css": ["hero-video.css"],
+    "php": ["hero-video.php"]
+  },
+  "variables": {
+    "minHeight": {
+      "label": "Minimum height",
+      "type": "string",
+      "default": "90vh"
+    },
+    "overlayColor": {
+      "label": "Overlay color",
+      "type": "color",
+      "default": "rgba(26, 18, 8, 0.65)"
+    },
+    "fallbackBg": {
+      "label": "Fallback background (video not loaded)",
+      "type": "color",
+      "default": "#1a1208"
+    },
+    "maxWidth": {
+      "label": "Content max width",
+      "type": "string",
+      "default": "750px"
+    }
+  },
+  "variants": {},
+  "dependencies": []
+}

@@ -4,6 +4,9 @@ import { useState, type ComponentType } from "react";
 import Link from "next/link";
 import type { KitData } from "../lib/data";
 import HeroSection from "./kit-previews/HeroSection";
+import HeroSplit from "./kit-previews/HeroSplit";
+import HeroVideo from "./kit-previews/HeroVideo";
+import HeroSlideshow from "./kit-previews/HeroSlideshow";
 import InfiniteCarousel from "./kit-previews/InfiniteCarousel";
 import GoogleMapEmbed from "./kit-previews/GoogleMapEmbed";
 import FaqAccordion from "./kit-previews/FaqAccordion";
@@ -20,6 +23,9 @@ import { designTokens } from "./kit-previews/shared";
 // Registry of kit slugs → React preview components
 const KIT_PREVIEWS: Record<string, ComponentType<Record<string, string | number>>> = {
   "hero-section": HeroSection,
+  "hero-split": HeroSplit,
+  "hero-video": HeroVideo,
+  "hero-slideshow": HeroSlideshow,
   "infinite-carousel": InfiniteCarousel,
   "google-map-embed": GoogleMapEmbed,
   "faq-accordion": FaqAccordion,
