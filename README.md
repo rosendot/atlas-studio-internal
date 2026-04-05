@@ -56,6 +56,10 @@ Each tab and detail view has its own URL (e.g., `/kits/hero-split`). Refreshing 
 | `lightbox-gallery/` | Interactive | Thumbnail grid with full-screen modal viewer and keyboard nav |
 | `before-after-slider/` | Interactive | Draggable divider comparing two overlaid images |
 | `image-comparison/` | Section | Side-by-side image pairs with labels and captions |
+| `footer-classic/` | Section | Multi-column footer with logo, contact, links, and hours |
+| `footer-minimal/` | Section | Clean single-line footer with logo, copyright, and social icons |
+| `footer-mega/` | Section | Large footer with about, services, links, newsletter, and contact row |
+| `footer-cta/` | Section | CTA banner above a standard multi-column footer |
 
 ## Sections
 

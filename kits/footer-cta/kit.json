@@ -1,0 +1,30 @@
+{
+  "name": "Footer CTA",
+  "slug": "footer-cta",
+  "description": "Call-to-action banner above a standard footer. Bold headline with button drives conversions on every page.",
+  "category": "section",
+  "tags": ["footer", "cta", "call-to-action", "banner", "conversion", "button", "contact"],
+  "files": {
+    "css": ["footer-cta.css"],
+    "php": ["footer-cta.php"]
+  },
+  "variables": {
+    "ctaHeading": {
+      "label": "CTA heading",
+      "type": "string",
+      "default": "Ready to Get Started?"
+    },
+    "ctaText": {
+      "label": "CTA body text",
+      "type": "string",
+      "default": "Let's talk about your project."
+    },
+    "ctaButtonLabel": {
+      "label": "CTA button label",
+      "type": "string",
+      "default": "Contact Us"
+    }
+  },
+  "variants": {},
+  "dependencies": []
+}

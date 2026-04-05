@@ -1,0 +1,146 @@
+/* Footer Classic — see README.md for usage */
+
+.footer-classic {
+	padding: 4rem 2rem 0;
+}
+
+.footer-classic__inner {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 3rem;
+	padding-bottom: 3rem;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Brand column */
+.footer-classic__brand-name {
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+
+.footer-classic__brand-desc {
+	font-size: 0.9rem;
+	line-height: 1.7;
+	opacity: 0.7;
+	margin-bottom: 1.5rem;
+}
+
+.footer-classic__social {
+	display: flex;
+	gap: 0.75rem;
+}
+
+.footer-classic__social-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.1);
+	font-size: 0.75rem;
+	font-weight: 700;
+	text-decoration: none;
+	transition: background 0.2s;
+}
+
+.footer-classic__social-link:hover {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+/* Column headings */
+.footer-classic__heading {
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-bottom: 1.25rem;
+	font-weight: 600;
+}
+
+/* Link lists */
+.footer-classic__links {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.footer-classic__links li {
+	margin-bottom: 0.65rem;
+}
+
+.footer-classic__links a {
+	font-size: 0.9rem;
+	text-decoration: none;
+	opacity: 0.7;
+	transition: opacity 0.2s;
+}
+
+.footer-classic__links a:hover {
+	opacity: 1;
+}
+
+/* Contact info */
+.footer-classic__contact-item {
+	font-size: 0.9rem;
+	opacity: 0.7;
+	margin-bottom: 0.65rem;
+	line-height: 1.5;
+}
+
+/* Hours */
+.footer-classic__hours-row {
+	display: flex;
+	justify-content: space-between;
+	font-size: 0.85rem;
+	opacity: 0.7;
+	margin-bottom: 0.5rem;
+}
+
+/* Bottom bar */
+.footer-classic__bottom {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5rem 0;
+	font-size: 0.8rem;
+	opacity: 0.5;
+}
+
+.footer-classic__bottom-links {
+	display: flex;
+	gap: 1.5rem;
+}
+
+.footer-classic__bottom-links a {
+	text-decoration: none;
+	opacity: 0.7;
+	transition: opacity 0.2s;
+}
+
+.footer-classic__bottom-links a:hover {
+	opacity: 1;
+}
+
+@media (max-width: 1024px) {
+	.footer-classic__inner {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 480px) {
+	.footer-classic__inner {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+
+	.footer-classic__bottom {
+		flex-direction: column;
+		gap: 0.75rem;
+		text-align: center;
+	}
+}

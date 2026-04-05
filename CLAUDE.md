@@ -54,7 +54,11 @@ wp-agency-vault/
 │   ├── masonry-gallery/     # Pinterest-style varying-height columns
 │   ├── lightbox-gallery/    # Thumbnail grid with full-screen modal viewer
 │   ├── before-after-slider/ # Draggable divider comparing two images
-│   └── image-comparison/    # Side-by-side image pairs with labels
+│   ├── image-comparison/    # Side-by-side image pairs with labels
+│   ├── footer-classic/      # Multi-column footer (logo, links, contact, hours)
+│   ├── footer-minimal/      # Single-line footer (logo, copyright, social)
+│   ├── footer-mega/         # Large footer (about, services, newsletter, contact)
+│   └── footer-cta/          # CTA banner + standard footer columns
 ├── palettes/                # Color systems + typography (mix and match with anything)
 │   └── ember-hearth/        # Rich reds, warm golds, serif headings
 ├── sections/                # Full page-level compositions of kits + palette (e.g., a complete menu page)

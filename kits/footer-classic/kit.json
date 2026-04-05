@@ -1,0 +1,25 @@
+{
+  "name": "Footer Classic",
+  "slug": "footer-classic",
+  "description": "Multi-column footer with logo, contact info, quick links, hours, and social icons. Works for any business type.",
+  "category": "section",
+  "tags": ["footer", "classic", "multi-column", "contact", "links", "social", "hours"],
+  "files": {
+    "css": ["footer-classic.css"],
+    "php": ["footer-classic.php"]
+  },
+  "variables": {
+    "columns": {
+      "label": "Number of columns",
+      "type": "number",
+      "default": 4
+    },
+    "sectionTitle": {
+      "label": "Footer heading",
+      "type": "string",
+      "default": ""
+    }
+  },
+  "variants": {},
+  "dependencies": []
+}

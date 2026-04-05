@@ -1,0 +1,56 @@
+/* Footer Minimal — see README.md for usage */
+
+.footer-minimal {
+	padding: 2rem;
+}
+
+.footer-minimal__inner {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	padding-top: 2rem;
+}
+
+.footer-minimal__brand {
+	font-size: 1.1rem;
+	font-weight: 700;
+}
+
+.footer-minimal__copy {
+	font-size: 0.8rem;
+	opacity: 0.5;
+}
+
+.footer-minimal__social {
+	display: flex;
+	gap: 0.75rem;
+}
+
+.footer-minimal__social-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.1);
+	font-size: 0.7rem;
+	font-weight: 700;
+	text-decoration: none;
+	transition: background 0.2s;
+}
+
+.footer-minimal__social-link:hover {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+	.footer-minimal__inner {
+		flex-direction: column;
+		gap: 1rem;
+		text-align: center;
+	}
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Classic Preview</title>
+    <link rel="stylesheet" href="footer-classic.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        .footer-classic { background: #1a1208; color: #faf6f0; }
+        .footer-classic__brand-name { font-family: Georgia, 'Times New Roman', serif; }
+        .footer-classic__heading { color: #d4a017; }
+        .footer-classic__social-link { color: #faf6f0; }
+        .footer-classic__bottom-links a { color: #faf6f0; }
+        .before-footer { padding: 4rem 2rem; text-align: center; background: #faf6f0; color: #888; }
+    </style>
+</head>
+<body>
+    <div class="before-footer"><p>Page content above footer...</p></div>
+    <footer class="footer-classic">
+        <div class="footer-classic__inner">
+            <div>
+                <div class="footer-classic__brand-name">Business Name</div>
+                <p class="footer-classic__brand-desc">A short description of your business and what makes it special.</p>
+                <div class="footer-classic__social">
+                    <a href="#" class="footer-classic__social-link">FB</a>
+                    <a href="#" class="footer-classic__social-link">IG</a>
+                    <a href="#" class="footer-classic__social-link">YP</a>
+                </div>
+            </div>
+            <div>
+                <h3 class="footer-classic__heading">Quick Links</h3>
+                <ul class="footer-classic__links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Reservations</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="footer-classic__heading">Contact</h3>
+                <p class="footer-classic__contact-item">123 Main Street<br>Your City, ST 12345</p>
+                <p class="footer-classic__contact-item">(555) 123-4567</p>
+                <p class="footer-classic__contact-item">hello@example.com</p>
+            </div>
+            <div>
+                <h3 class="footer-classic__heading">Hours</h3>
+                <div class="footer-classic__hours-row"><span>Mon – Fri</span><span>9am – 9pm</span></div>
+                <div class="footer-classic__hours-row"><span>Saturday</span><span>10am – 10pm</span></div>
+                <div class="footer-classic__hours-row"><span>Sunday</span><span>11am – 8pm</span></div>
+            </div>
+        </div>
+        <div class="footer-classic__bottom">
+            <span>&copy; 2026 Business Name. All rights reserved.</span>
+            <div class="footer-classic__bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "Footer Minimal",
+  "slug": "footer-minimal",
+  "description": "Clean single-line footer with logo, copyright, and social icons. Unobtrusive and modern.",
+  "category": "section",
+  "tags": ["footer", "minimal", "simple", "single-line", "clean", "modern", "social"],
+  "files": {
+    "css": ["footer-minimal.css"],
+    "php": ["footer-minimal.php"]
+  },
+  "variables": {
+    "sectionTitle": {
+      "label": "Footer text",
+      "type": "string",
+      "default": ""
+    }
+  },
+  "variants": {},
+  "dependencies": []
+}

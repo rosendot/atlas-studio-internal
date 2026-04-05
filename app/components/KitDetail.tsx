@@ -19,6 +19,10 @@ import MasonryGallery from "./kit-previews/MasonryGallery";
 import LightboxGallery from "./kit-previews/LightboxGallery";
 import BeforeAfterSlider from "./kit-previews/BeforeAfterSlider";
 import ImageComparison from "./kit-previews/ImageComparison";
+import FooterClassic from "./kit-previews/FooterClassic";
+import FooterMinimal from "./kit-previews/FooterMinimal";
+import FooterMega from "./kit-previews/FooterMega";
+import FooterCta from "./kit-previews/FooterCta";
 import FaqTwoColumn from "./kit-previews/FaqTwoColumn";
 import FaqCards from "./kit-previews/FaqCards";
 import FaqTabbed from "./kit-previews/FaqTabbed";
@@ -45,6 +49,10 @@ const KIT_PREVIEWS: Record<string, ComponentType<Record<string, string | number>
   "lightbox-gallery": LightboxGallery,
   "before-after-slider": BeforeAfterSlider,
   "image-comparison": ImageComparison,
+  "footer-classic": FooterClassic,
+  "footer-minimal": FooterMinimal,
+  "footer-mega": FooterMega,
+  "footer-cta": FooterCta,
 };
 
 const LANG_COLORS: Record<string, string> = {

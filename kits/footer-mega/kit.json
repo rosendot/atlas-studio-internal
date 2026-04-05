@@ -1,0 +1,20 @@
+{
+  "name": "Footer Mega",
+  "slug": "footer-mega",
+  "description": "Large multi-section footer with about blurb, services, quick links, newsletter signup, contact info, and bottom bar.",
+  "category": "section",
+  "tags": ["footer", "mega", "fat", "newsletter", "services", "contact", "links", "large"],
+  "files": {
+    "css": ["footer-mega.css"],
+    "php": ["footer-mega.php"]
+  },
+  "variables": {
+    "sectionTitle": {
+      "label": "Footer heading",
+      "type": "string",
+      "default": ""
+    }
+  },
+  "variants": {},
+  "dependencies": []
+}
