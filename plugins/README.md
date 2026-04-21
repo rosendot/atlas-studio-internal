@@ -20,14 +20,20 @@ plugins/
 ├── restaurant/              # Restaurant POS integrations
 │   ├── zaytech.json         # Clover POS ordering
 │   └── toast.json           # Toast POS integration (custom-built)
-└── service/                 # Service business (salons, repair shops)
-    └── latepoint.json       # Appointment booking
+├── service/                 # Service business (salons, repair shops)
+│   └── latepoint.json       # Appointment booking
+└── tools/                   # External tools (not WordPress plugins)
+    ├── uptimerobot.json     # Uptime monitoring (day-1, free)
+    ├── stripe.json          # Client billing (day-1, free tier)
+    └── shutterstock.json    # Stock image licensing (day-1)
 ```
 
 ## Buy When
 
 - **day-1** — Purchase before launching your first client site
 - **later** — Buy when you have enough clients to justify the cost
+
+Tools in `plugins/tools/` are external services, not WordPress plugins. They follow the same day-1/later convention.
 
 ## plugin.json Schema
 

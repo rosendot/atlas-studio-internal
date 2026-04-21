@@ -13,7 +13,7 @@ A personal knowledge base, reusable toolkit, and internal dashboard for building
 | `templates/` | Full page layouts with placeholder content — compose kits, pick a palette, swap placeholders, deploy |
 | `fonts/` | Font registry — curated Google Fonts with pairing info, vibe tags, and weight details |
 | `plugins/` | Structured plugin registry — individual JSON files with costs, licensing, install conditions |
-| `guides/` | Step-by-step reference docs — Bedrock setup, LocalWP config, design process, agency flow |
+| `guides/` | Step-by-step reference docs — Bedrock setup, LocalWP config, design process, agency flow, client contracts/onboarding/offboarding, billing, accessibility and performance audits, image licensing, uptime monitoring |
 
 ## Dashboard
 

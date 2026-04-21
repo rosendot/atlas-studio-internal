@@ -91,6 +91,9 @@ Generates a step-by-step deployment checklist for taking a client site from loca
 - [ ] Wordfence scan clean
 - [ ] First UpdraftPlus backup completed
 - [ ] MainWP dashboard shows site as connected
+- [ ] Lighthouse audit complete — Performance 80+, SEO 90+ (mobile)
+- [ ] axe DevTools scan complete — no Critical violations
+- [ ] UptimeRobot monitor added for this site
 
 ---
 

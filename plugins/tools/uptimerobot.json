@@ -1,0 +1,18 @@
+{
+  "name": "UptimeRobot",
+  "slug": "uptimerobot",
+  "composer": null,
+  "tier": "free",
+  "license": "free",
+  "cost": "$0",
+  "covers": "50 monitors",
+  "cost_per_site": "$0",
+  "category": "monitoring",
+  "buy_when": "day-1",
+  "install_on": ["external-tool"],
+  "description": "External uptime monitoring. Checks each client site every 5 minutes from outside the server and sends email alerts on downtime. Not a WordPress plugin — configured at uptimerobot.com.",
+  "tags": ["uptime", "monitoring", "alerts", "downtime"],
+  "replaces": [],
+  "requires": [],
+  "config_notes": "Add one HTTP(s) monitor per client site + one for the MainWP dashboard. Free tier covers up to 50 monitors at 5-minute intervals."
+}

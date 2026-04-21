@@ -1,0 +1,18 @@
+{
+  "name": "Shutterstock",
+  "slug": "shutterstock",
+  "composer": null,
+  "tier": "premium",
+  "license": "agency",
+  "cost": "varies by plan",
+  "covers": "unlimited client sites",
+  "cost_per_site": "negligible",
+  "category": "assets",
+  "buy_when": "day-1",
+  "install_on": ["external-tool"],
+  "description": "Licensed stock photography for client sites. Agency subscription covers commercial use across all client sites. Official source for all stock images — never use unlicensed images from Google or Pinterest.",
+  "tags": ["images", "stock-photos", "licensing", "assets"],
+  "replaces": [],
+  "requires": [],
+  "config_notes": "Download images here for all client work. See guides/image-licensing.md for full policy. Supplement with Unsplash or Pexels (both free) for supporting images."
+}

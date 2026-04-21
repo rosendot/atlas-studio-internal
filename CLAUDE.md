@@ -75,7 +75,8 @@ wp-agency-vault/
 ├── plugins/                 # Structured plugin registry (JSON per plugin)
 │   ├── core/                # Install on every client site
 │   ├── restaurant/          # Restaurant-specific (Clover, Toast)
-│   └── service/             # Service business (appointments)
+│   ├── service/             # Service business (appointments)
+│   └── tools/               # External tools (UptimeRobot, Stripe, Shutterstock)
 └── guides/                  # Step-by-step reference docs
 ```
 
@@ -208,7 +209,7 @@ Templates reference kits via `kits_used` and a default palette via `default_pale
 
 ## Plugin Registry
 
-Plugins are stored as individual JSON files in `plugins/core/`, `plugins/restaurant/`, and `plugins/service/`. Each `plugin.json` has: name, slug, composer name, tier, license, cost, install conditions, tags, and config notes.
+Plugins are stored as individual JSON files in `plugins/core/`, `plugins/restaurant/`, `plugins/service/`, and `plugins/tools/`. Each `plugin.json` has: name, slug, composer name, tier, license, cost, install conditions, tags, and config notes. Entries in `plugins/tools/` represent external services (not WordPress plugins) — their `composer` field is `null` and `install_on` is `["external-tool"]`.
 
 Plugins have a `buy_when` field: `day-1` (buy before first client) or `later` (buy when you have enough clients).
 
