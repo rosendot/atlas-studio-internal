@@ -81,7 +81,13 @@ Each tab and detail view has its own URL (e.g., `/kits/hero-split`). Refreshing 
 
 ## Sections
 
-Sections are full page-level compositions that wire multiple kits together. None built yet — the infrastructure is ready for when you compose your first full page view (e.g., a complete restaurant menu page that combines hero + menu-list + CTA).
+Sections are full page-level compositions that wire multiple kits together into a complete page view.
+
+| Section | Category | Composes |
+|---------|----------|----------|
+| `landing-service-business/` | Landing | header-classic, hero-split, logo-wall, service-cards, process-steps, testimonial-cards, faq-accordion, cta-banner, footer-classic |
+| `landing-saas/` | Landing | header-classic, hero-split, logo-wall, feature-grid, feature-alternating, stats-counter, testimonial-slider, cta-banner, footer-minimal |
+| `landing-restaurant/` | Landing | header-transparent, hero-video, infinite-carousel, menu-list, grid-gallery, testimonial-cards, google-map-embed, cta-banner, footer-mega |
 
 ## Palettes
 

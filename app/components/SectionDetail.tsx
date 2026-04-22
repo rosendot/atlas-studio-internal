@@ -3,10 +3,17 @@
 import { useState, type ComponentType } from "react";
 import Link from "next/link";
 import type { PaletteData, SectionData } from "../lib/data";
+import LandingServiceBusiness from "./section-previews/LandingServiceBusiness";
+import LandingSaas from "./section-previews/LandingSaas";
+import LandingRestaurant from "./section-previews/LandingRestaurant";
+import { designTokens } from "./kit-previews/shared";
 
 // Registry of section slugs → React preview components
 // Add entries here as you build full page-composition sections
 const SECTION_PREVIEWS: Record<string, ComponentType<Record<string, string | number>>> = {
+  "landing-service-business": LandingServiceBusiness,
+  "landing-saas": LandingSaas,
+  "landing-restaurant": LandingRestaurant,
 };
 
 const LANG_COLORS: Record<string, string> = {
@@ -123,7 +130,23 @@ export default function SectionDetail({
 
       {/* Preview */}
       {activeView === "preview" && (
-        <div className="h-[calc(100vh-114px)] overflow-auto">
+        <div
+          className="h-[calc(100vh-114px)] overflow-auto"
+          style={(() => {
+            // Start with the default design tokens, then overlay the active
+            // palette's colors/fonts so kits inside this section use palette values.
+            const style: Record<string, string> = { ...designTokens };
+            if (activePalette) {
+              for (const [key, color] of Object.entries(activePalette.colors)) {
+                style[`--color-${key.replace(/_/g, "-")}`] = color.value;
+              }
+              for (const [key, font] of Object.entries(activePalette.fonts)) {
+                style[`--font-${key}`] = font.value;
+              }
+            }
+            return style;
+          })()}
+        >
           {(() => {
             const PreviewComponent = SECTION_PREVIEWS[section.slug];
             if (!PreviewComponent) {

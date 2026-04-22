@@ -80,6 +80,9 @@ atlas-studio-internal/
 ├── palettes/                # Color systems + typography (mix and match with anything)
 │   └── ember-hearth/        # Rich reds, warm golds, serif headings
 ├── sections/                # Full page-level compositions of kits + palette (e.g., a complete menu page)
+│   ├── landing-service-business/ # Service-business landing: hero → trust → services → process → testimonials → FAQ → CTA
+│   ├── landing-saas/        # SaaS landing: hero → trust → pillars → feature deep-dive → stats → testimonial slider → CTA
+│   └── landing-restaurant/  # Restaurant landing: hero-video → favorites → menu → gallery → reviews → map → reservation CTA
 ├── templates/               # Full page layouts that compose kits + reference a palette
 │   └── restaurant-classic/  # Restaurant template with hero, carousel, map, gallery
 ├── plugins/                 # Structured plugin registry (JSON per plugin)
